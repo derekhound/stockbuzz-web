@@ -1,0 +1,213 @@
+<div id="aut-signup" class="widget" ng-controller="autSignupCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title" translate="auth.signup.title"></h4>
+	</div>
+
+	<div class="widget-bd">
+
+		<!-- quick login -->
+		<div id="quick_login" class="row">
+			<div class="col-xs-offset-22 col-xs-1">
+				<a ng-click="fbLogin()" title="{{'auth.signin.text.facebook_login' | translate}}">
+					<img src="images/brand/facebook.png">
+				</a>
+			</div>
+		</div>
+
+		<form name="form" novalidate>
+
+			<!-- fullname -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label translate="auth.signup.form.fullname"></label>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-offset-4 col-xs-8">
+					<input type="text" name="fullname" class="form-control" ng-model="data.fullname" required>
+				</div>
+				<div class="col-xs-10">
+					<!-- [INFO] Default -->
+					<div class="help-block" translate="auth.signup.help.I_FULLNAME"
+						 ng-show="form.fullname.$pristine">
+					</div>
+					<!-- [SUCCESS] OK -->
+					<div class="help-block success" translate="auth.signup.help.S_OK"
+						 ng-show="form.fullname.$dirty && form.fullname.$valid">
+					</div>
+					<!--  [ERROR] Required -->
+					<div class="help-block error" ng-bind="fullnameErrorStr(form.fullname)"
+						 ng-show="form.fullname.$dirty && form.fullname.$invalid">
+					</div>
+				</div>
+			</div>
+
+			<!-- email -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label translate="auth.signup.form.email"></label>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-offset-4 col-xs-8">
+					<input type="email" name="email" class="form-control" ng-model="data.email" unique-value="email" required>
+				</div>
+				<div class="col-xs-10">
+					<!-- [INFO] Default -->
+					<div class="help-block" translate="auth.signup.help.I_EMAIL"
+						 ng-show="form.email.$pristine">
+					</div>
+					<!-- [SUCCESS] OK -->
+					<div class="help-block success" translate="auth.signup.help.S_OK"
+						 ng-show="form.email.$dirty && form.email.$valid">
+					</div>
+					<!--  [ERROR] Required, Email -->
+					<div class="help-block error" ng-bind="emailErrorStr(form.email)"
+						 ng-show="form.email.$dirty && form.email.$invalid">
+					</div>
+				</div>
+			</div>
+
+			<!-- password -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label translate="auth.signup.form.password"></label>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-offset-4 col-xs-8">
+					<input type="password" name="password" class="form-control" ng-model="data.password" ng-pattern="/^[\w^~!@#$%^&*()_+]+$/" ng-minlength="6" ng-maxlength="20" required>
+				</div>
+				<div class="col-xs-10">
+					<!-- [INFO] Default -->
+					<div class="help-block" translate="auth.signup.help.I_PASSWORD"
+						 ng-show="form.password.$pristine">
+					</div>
+					<!-- [SUCCESS] OK -->
+					<div class="help-block success" translate="auth.signup.help.S_OK"
+						 ng-show="form.password.$dirty && form.password.$valid">
+					</div>
+					<!--  [ERROR] Required, Pattern, Length -->
+					<div class="help-block error" ng-bind="passwordErrorStr(form.password)"
+						 ng-show="form.password.$dirty && form.password.$invalid">
+					</div>
+				</div>
+			</div>
+
+			<!-- password_confirm -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label translate="auth.signup.form.password_confirm"></label>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-offset-4 col-xs-8">
+					<input type="password" name="password_confirm" class="form-control" ng-model="data.password_confirm" password-match="data.password" required>
+				</div>
+				<div class="col-xs-10">
+					<!-- [SUCCESS] OK -->
+					<div class="help-block success" translate="auth.signup.help.S_OK"
+						 ng-show="form.password_confirm.$dirty && form.password_confirm.$valid">
+					</div>
+					<!--  [ERROR] Required, Pattern, Length -->
+					<div class="help-block error" ng-bind="passwordConfirmErrorStr(form.password_confirm)"
+						 ng-show="form.password_confirm.$dirty && form.password_confirm.$invalid">
+					</div>
+				</div>
+			</div>
+
+			<!-- username -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label translate="auth.signup.form.username"></label>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-offset-4 col-xs-8">
+					<input type="text" name="username" class="form-control" ng-model="data.username" ng-pattern="/^\w+$/" ng-minlength="6" ng-maxlength="20" unique-value="username" required>
+				</div>
+				<div class="col-xs-10">
+					<!-- [INFO] Default -->
+					<div class="help-block" translate="auth.signup.help.I_USERNAME"
+						 ng-show="form.username.$pristine">
+					</div>
+					<!-- [SUCCESS] OK -->
+					<div class="help-block success" translate="auth.signup.help.S_OK"
+						 ng-show="form.username.$dirty && form.username.$valid">
+					</div>
+					<!--  [ERROR] Required, Pattern, Length -->
+					<div class="help-block error" ng-bind="usernameErrorStr(form.username)"
+						 ng-show="form.username.$dirty && form.username.$invalid">
+					</div>
+				</div>
+			</div>
+
+			<!-- birthday -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label translate="auth.signup.form.birthday"></label>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-offset-4 col-xs-8">
+					<!-- year -->
+					<select id="year" name="year" class="form-control" ng-model="data.year"
+						ng-options="year.value as year.name for year in years" required>
+						<option value="" translate="auth.signup.text.year"></option>
+					</select>
+					<!-- month -->
+					<select id="month" name="month" class="form-control" ng-model="data.month"
+							ng-options="month.value as month.name for month in monthes" required>
+						<option value="" translate="auth.signup.text.month"></option>
+					</select>
+					<!-- day -->
+					<select id="day" name="day" class="form-control" ng-model="data.day"
+							ng-options="day.value as day.name for day in days" required>
+						<option value="" translate="auth.signup.text.day"></option>
+					</select>
+				</div>
+				<div class="col-xs-10">
+					<!-- [SUCCESS] OK -->
+					<div class="help-block success" translate="auth.signup.help.S_OK"
+						 ng-show="birthdaySuccessShow(form.year, form.month, form.day)">
+					</div>
+				</div>
+			</div>
+
+			<!-- sex -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label translate="auth.signup.form.sex"></label>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label class="checkbox-inline">
+						<input type="radio" value="male" ng-model="data.sex"> {{'auth.signup.text.male' | translate}}
+					</label>
+					<label class="checkbox-inline">
+						<input type="radio" value="female" ng-model="data.sex"> {{'auth.signup.text.female' | translate}}
+					</label>
+				</div>
+			</div>
+
+			<!-- ok -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<button type="submit" id="ok" class="btn btn-success form-control" translate="auth.signup.form.ok" ng-click="ok()">
+					</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label>&nbsp;</label>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="widget-ft">
+		<p>{{'auth.signup.text.already_register_account' | translate}} <a href="#/auth/signin" translate="auth.signup.text.signin"></a></p>
+	</div>
+</div>

@@ -1,0 +1,46 @@
+.navi {
+    .navi-item {
+
+        // border top
+        border-top: 1px solid #ddd;
+        &:first-child {
+            border-top: 0;
+        }
+
+		// border radius
+		&:first-child {
+			.border-top-radius(4px);
+		}
+		&:last-child {
+			.border-bottom-radius(4px);
+		}
+
+        a {
+            display: block;
+            padding: 0 12px;
+            line-height: 35px;
+            text-decoration: none;
+
+            .name {
+				color: #141823;
+                vertical-align: bottom;
+            }
+            .icon {
+                float: right;
+                font-size: 14px;
+				color: #e9edf1;
+            }
+        }
+
+        &.active {
+			font-weight: bold;
+			.icon {
+				color: #141823;
+			}
+        }
+
+        &:hover {
+			background: #f7f7f7;
+        }
+    }
+}

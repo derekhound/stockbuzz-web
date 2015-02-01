@@ -1,0 +1,26 @@
+<div id="search-common-query" class="module">
+
+	<div class="row form-group">
+		<div class="col-xs-21">
+			<input type="text" name="query" class="form-control" placeholder="{{'search.common.query.any_word' | translate}}" ng-model="data.query">
+		</div>
+		<div class="col-xs-3">
+			<button class="btn btn-primary form-control" translate="search.common.query.search" ng-click="ok()">
+			</button>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-24">
+			<ul class="tags">
+				<li ng-class="{'active': isActive('search.person')}">
+					<a href="#/search/person" translate="search.common.query.person"></a>
+				</li>
+				<li ng-class="{'active': isActive('search.stock')}">
+					<a href="#/search/stock" translate="search.common.query.stock"></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>

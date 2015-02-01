@@ -1,0 +1,77 @@
+<div id="person-profile" class="widget" ng-controller="perProfileCtrl">
+
+	<div class="master">
+		<!-- avatar -->
+		<div class="user_avatar">
+			<div class="avatar_wrapper">
+				<img ng-src="{{user.avatar}}" class="avatar" />
+			</div>
+
+			<button class="btn btn-follow btn-sm" ng-class="[getFollowBtnStyle()]" ng-click="toggleFollow()">{{getFollowBtnString()}}</button>
+		</div>
+
+		<!-- content -->
+		<div class="user_content">
+			<div class="name">
+				<span class="fullname black">{{user.fullname}}</span>&nbsp;
+				<span class="username">@{{user.username}}</span>
+			</div>
+
+			<div class="biographic" ng-show="currentUser.biographic">
+				<span>{{user.biographic}}</span>
+			</div>
+
+			<div class="website" ng-show="currentUser.website">
+				<a ng-href="{{currentUser.website}}" target="_blank">{{user.website}}</a>
+			</div>
+
+			<ul class="profit" ng-if="showProfit()">
+				<li>
+					<div tooltip-placement="top" tooltip="{{'person.profile.30_days_hint' | translate}}">
+						<span class="name" translate="person.profile.30_days"></span>
+						<span class="percent" ng-class="upDown(analysis.profit_30)">{{analysis.profit_30 * 100 | number:2}}%</span>
+					</div>
+				</li>
+				<li>
+					<div tooltip-placement="top" tooltip="{{'person.profile.90_days_hint' | translate}}">
+						<span class="name" translate="person.profile.90_days"></span>
+						<span class="percent" ng-class="upDown(analysis.profit_90)">{{analysis.profit_90 * 100 | number:2}}%</span>
+					</div>
+				</li>
+				<li>
+					<div tooltip-placement="top" tooltip="{{'person.profile.365_days_hint' | translate}}">
+						<span class="name" translate="person.profile.365_days"></span>
+						<span class="percent" ng-class="upDown(analysis.profit_365)">{{analysis.profit_365 * 100 | number:2}}%</span>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+
+	<!-- slave -->
+	<div class="slave">
+
+		<ul class="user_stat">
+			<li>
+				<a ng-href="#/person/{{user.username}}/post">
+					<div class="num">{{user.post_count}}</div>
+					<div class="name" translate="person.stat.post"></div>
+				</a>
+			</li>
+			<li>
+				<a ng-href="#/person/{{user.username}}/follow_person">
+					<div class="num">{{user.follow_person_count}}</div>
+					<div class="name" translate="person.stat.following"></div>
+				</a>
+			</li>
+			<li>
+				<a ng-href="#/person/{{user.username}}/follower">
+					<div class="num">{{user.follower_count}}</div>
+					<div class="name" translate="person.stat.follower"></div>
+				</a>
+			</li>
+		</ul>
+
+	</div>
+</div>

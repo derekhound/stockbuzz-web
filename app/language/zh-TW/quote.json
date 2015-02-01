@@ -1,0 +1,26 @@
+{
+	"quote": {
+		"text": {
+
+		},
+
+		"rank": {
+
+		},
+		"category": {
+			"title": "類股行情",
+			"column": {
+				"code": "代碼",
+				"name": "股票",
+				"last_trade_price": "成交",
+				"change": "漲跌",
+				"percent_change": "漲跌幅",
+				"previous_close": "昨收",
+				"open": "開盤",
+				"days_high": "最高",
+				"days_low": "最低",
+				"volume": "成交量"
+			}
+		}
+	}
+}

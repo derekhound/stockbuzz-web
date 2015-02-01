@@ -1,0 +1,43 @@
+//
+// Modals
+// --------------------------------------------------
+
+.qb-modal {
+	// Modal header
+	// Top section of the modal w/ title and dismiss
+	.modal-header {
+		padding: 9px 15px;
+		border-bottom: 1px solid #eee;
+		//min-height: (@modal-title-padding + @modal-title-line-height);
+	}
+	// Close icon
+	.modal-header .close {
+		margin-top: 3px;
+	}
+
+	// Title text within header
+	.modal-title {
+		margin: 0;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 27px;
+	}
+
+	// Modal body
+	// Where all modal content resides (sibling of .modal-header and .modal-footer)
+	.modal-body {
+		position: relative;
+		padding: 15px;
+	}
+
+	// Footer (for actions)
+	.modal-footer {
+		margin-top: 0;
+		padding: 14px 15px 15px 15px;
+		text-align: right; // right align buttons
+		background-color: #f5f5f5;
+		border-top: 1px solid #ddd;
+		.border-bottom-radius(6px);
+		.clearfix(); // clear it in case folks use .pull-* classes on buttons
+	}
+}

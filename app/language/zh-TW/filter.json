@@ -1,0 +1,12 @@
+{
+	"filter": {
+		"moment": {
+			"now": "現在",
+			"month": "月",
+			"day": "日",
+			"seconds": "秒鐘",
+			"minutes": "分鐘",
+			"hours": "小時"
+		}
+	}
+}

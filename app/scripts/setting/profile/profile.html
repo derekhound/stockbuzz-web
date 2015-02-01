@@ -1,0 +1,124 @@
+<div id="set-profile" class="widget" ng-controller="setProfileCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title" translate="setting.profile.title"></h4>
+	</div>
+
+	<div class="widget-bd">
+		<form name="form" class="form-horizontal" novalidate>
+
+			<!-- photo -->
+			<div id="photo" class="form-group">
+				<label class="col-xs-6 control-label" translate="setting.profile.form.photo"></label>
+				<div class="col-xs-12">
+					<img class="avatar" ng-src="{{data.photo}}">
+					<qb-upload-avatar>
+					</qb-upload-avatar>
+				</div>
+			</div>
+
+			<!-- fullname -->
+			<div class="form-group">
+				<label class="col-xs-6 control-label" translate="setting.profile.form.fullname"></label>
+				<div class="col-xs-12">
+					<input type="text" name="fullname" class="form-control" ng-model="data.fullname" required>
+					<!-- [INFO] Default -->
+					<span class="help-block small" translate="setting.profile.help.I_FULLNAME"
+				  		ng-show="form.fullname.$pristine">
+				  	</span>
+					<!-- [SUCCESS] OK -->
+					<span class="help-block small success" translate="setting.profile.help.S_OK"
+						  ng-show="form.fullname.$dirty && form.fullname.$valid">
+				  	</span>
+					<!-- [ERROR] Required -->
+					<span class="help-block small error" ng-bind="fullnameErrorStr(form.fullname)"
+				  		ng-show="form.fullname.$dirty && form.fullname.$invalid">
+					</span>
+				</div>
+			</div>
+
+			<!-- birthday -->
+			<div class="form-group">
+				<label class="col-xs-6 control-label" translate="setting.profile.form.birthday"></label>
+				<div class="col-xs-12">
+					<!-- year -->
+					<select id="year" name="year" class="form-control" ng-model="data.year"
+							ng-options="year.value as year.name for year in years" required>
+						<option value="" translate="auth.signup.text.year"></option>
+					</select>
+					<!-- month -->
+					<select id="month" name="month" class="form-control" ng-model="data.month"
+							ng-options="month.value as month.name for month in monthes" required>
+						<option value="" translate="auth.signup.text.month"></option>
+					</select>
+					<!-- day -->
+					<select id="day" name="day" class="form-control" ng-model="data.day"
+							ng-options="day.value as day.name for day in days" required>
+						<option value="" translate="auth.signup.text.day"></option>
+					</select>
+					<span class="help-block small" translate="setting.profile.help.I_BIRTHDAY"></span>
+				</div>
+			</div>
+
+			<!-- sex -->
+			<div id="sex" class="form-group">
+				<label class="col-xs-6 control-label" translate="setting.profile.form.sex"></label>
+				<div class="col-xs-12">
+					<label class="checkbox-inline">
+						<input type="radio" value="male" ng-model="data.sex"> {{'setting.profile.text.male' | translate}}
+					</label>
+					<label class="checkbox-inline">
+						<input type="radio" value="female" ng-model="data.sex"> {{'setting.profile.text.female' | translate}}
+					</label>
+				</div>
+			</div>
+
+			<!-- website -->
+			<div class="form-group">
+				<label class="col-xs-6 control-label" translate="setting.profile.form.website"></label>
+				<div class="col-xs-12">
+					<input type="text" name="website" class="form-control" placeholder="http://" ng-model="data.website">
+					<span class="help-block small" translate="setting.profile.help.I_WEBSITE"></span>
+				</div>
+			</div>
+
+			<!-- biographic -->
+			<div class="form-group">
+				<label class="col-xs-6 control-label" translate="setting.profile.form.biographic"></label>
+				<div class="col-xs-12">
+					<textarea
+						name="biographic"
+						class="form-control"
+						rows="4"
+						ng-model="data.biographic"
+						ng-maxlength="160"
+					>
+					</textarea>
+					<!-- [INFO] Default -->
+					<span class="help-block small" translate="setting.profile.help.I_BIOGRAPHIC"
+						  ng-show="form.biographic.$pristine">
+				  	</span>
+					<!-- [SUCCESS] OK -->
+					<span class="help-block small success" translate="setting.profile.help.S_OK"
+						  ng-show="form.biographic.$dirty && form.biographic.$valid">
+				  	</span>
+					<!-- [ERROR] Required -->
+					<span class="help-block small error" ng-bind="biographicErrorStr(form.biographic)"
+						  ng-show="form.biographic.$dirty && form.biographic.$invalid">
+					</span>
+				</div>
+			</div>
+
+			<!-- save -->
+			<div class="form-group">
+				<label class="col-xs-6 control-label"></label>
+				<div class="col-xs-12">
+					<button class="btn btn-primary" translate="setting.profile.form.ok"
+						ng-disabled="form.$pristine || form.$invalid" ng-click="ok()">
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</div>

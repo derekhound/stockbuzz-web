@@ -1,0 +1,22 @@
+<div class="comment-box">
+	<div class="content">
+		<!-- avatar -->
+		<a ng-href="#/home/user/{{currentUser.username}}" class="avatar_container">
+			<img ng-src="{{currentUser.avatarS}}" class="avatar avatarS">
+		</a>
+
+		<!-- text -->
+		<textarea
+			class="form-control"
+			placeholder="{{'timeline.box.comment_hint' | translate}}"
+			ng-model="text"
+			msd-elastic
+			ng-focus="expand()">
+		</textarea>
+
+		<!-- action -->
+		<div class="action">
+			<button type="button" class="btn btn-tweet btn-sm" translate="timeline.box.comment" ng-click="submit()"></button>
+		</div>
+	</div>
+</div>

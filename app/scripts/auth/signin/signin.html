@@ -1,0 +1,95 @@
+<div id="aut-signin" class="widget" ng-controller="autSigninCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title" translate="auth.signin.title"></h4>
+	</div>
+
+	<div class="widget-bd">
+
+		<!-- quick login -->
+		<div class="row">
+			<div class="col-xs-offset-4 col-xs-13">
+				<div class="separator">
+					<div class="title" translate="auth.signin.text.quick_login"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-offset-4 col-xs-8">
+				<button class="btn btn-primary form-control" ng-click="fbLogin()" translate="auth.signin.text.facebook_login"></button>
+			</div>
+		</div>
+		<br/>
+		<br/>
+
+		<!-- email login -->
+		<div class="row">
+			<div class="col-xs-offset-4 col-xs-13">
+				<div class="separator">
+					<div class="title" translate="auth.signin.text.email_login"></div>
+				</div>
+			</div>
+		</div>
+
+		<form name="form" novalidate>
+
+			<!-- email -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label translate="auth.signin.form.email"></label>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-offset-4 col-xs-8">
+					<input type="text" name="email" class="form-control" ng-model="data.email" required>
+				</div>
+			</div>
+
+			<!-- password -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label translate="auth.signin.form.password"></label>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-offset-4 col-xs-8">
+					<input type="password" name="password" class="form-control" ng-model="data.password" required>
+				</div>
+				<div class="col-md-5">
+					<div class="help-block">
+						<span>{{'auth.signin.help.forgot_your' | translate}}<a href="#/auth/forgot_password" translate="auth.signin.help.password"></a>?</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- remember_me -->
+			<div class="row form-group">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label>
+						<input type="checkbox" name="remember_me" ng-model="data.remember_me">
+						<span translate="auth.signin.form.remember_me"></span>
+					</label>
+				</div>
+			</div>
+
+			<!-- ok -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<button type="submit" id="ok" class="btn btn-success form-control" ng-click="ok()" translate="auth.signin.form.ok"></button>
+				</div>
+			</div>
+			<br/>
+			<br/>
+		</form>
+	</div>
+
+	<div class="widget-ft">
+		<div class="row">
+			<div class="col-xs-offset-4 col-xs-20">
+				<p>{{'auth.signin.text.join_site_first_time' | translate}} <a href="#/auth/signup" translate="auth.signin.text.join_immediately"> </a></p>
+				<p>{{'auth.signin.text.already_activate' | translate}} <a href="#/auth/send_activation_email" translate="auth.signin.text.send_activate_email"> </a></p>
+			</div>
+		</div>
+	</div>
+</div>

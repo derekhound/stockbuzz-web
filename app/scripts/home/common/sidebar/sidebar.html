@@ -1,0 +1,50 @@
+<div id="sidebar" ng-controller="homSidebarCtrl">
+
+	<!-- menu -->
+	<ul class="menu">
+		<!-- favorite -->
+		<li class="menu-header">
+			<span translate="home.sidebar.index.header"></span>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('home.portal.news')}">
+			<a href="#/home/portal/news">
+				<span translate="home.sidebar.index.news"></span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('home.portal.favorite')}">
+			<a href="#/home/portal/favorite">
+				<span translate="home.sidebar.index.favorite"></span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('home.photo.album')}">
+			<a href="#/home/photo/album/{{currentUser.username}}">
+				<span translate="home.sidebar.index.photo"></span>
+			</a>
+		</li>
+
+		<!-- note -->
+		<li class="menu-header">
+			<span translate="home.sidebar.invest.header"></span>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('home.invest.watch')}">
+			<a href="#/home/invest/watch">
+				<span translate="home.sidebar.invest.watch"></span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('home.invest.now_profit')}">
+			<a href="#/home/invest/now_profit">
+				<span translate="home.sidebar.invest.now_profit"></span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('home.invest.past_profit')}">
+			<a href="#/home/invest/past_profit">
+				<span translate="home.sidebar.invest.past_profit"></span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('home.invest.transaction')}">
+			<a href="#/home/invest/transaction//">
+				<span translate="home.sidebar.invest.transaction"></span>
+			</a>
+		</li>
+	</ul>
+</div>

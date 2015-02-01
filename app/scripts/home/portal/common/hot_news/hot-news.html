@@ -1,0 +1,16 @@
+<div class="module" ng-controller="homPortalHotNewsCtrl">
+
+	<div class="module-hd">
+		<div class="link"><a href="#/hot/hot_news" translate="portal.hot_news.link"></a></div>
+		<div class="title"><a href="#/hot/hot_news" translate="portal.hot_news.title"></a></div>
+	</div>
+
+	<div class="module-bd">
+		<ul>
+			<li ng-repeat="post in posts">
+				<a ng-href="#/tweet/post/{{post.tweet_id}}" title="{{post.title}}">{{post.title | limitTo:17}}</a>
+			</li>
+		</ul>
+	</div>
+
+</div>

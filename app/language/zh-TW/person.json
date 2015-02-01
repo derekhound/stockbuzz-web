@@ -1,0 +1,47 @@
+{
+	"person": {
+		"text": {
+			"no_data": "目前沒有任何資料"
+		},
+		"stat": {
+			"post": "推文",
+			"following": "關注",
+			"follower": "跟隨"
+		},
+		"btn_follow": {
+			"edit": "編輯資料",
+			"unfollow": "關注",
+			"follow": "正在關注"
+		},
+		"profile": {
+			"30_days": "30天",
+			"90_days": "90天",
+			"365_days": "365天",
+			"30_days_hint": "最近30天的績效",
+			"90_days_hint": "最近90天的績效",
+			"365_days_hint": "最近365天的績效"
+		},
+		"post": {
+			"title": "我的推文"
+		},
+		"follow_person": {
+			"title": "關注的人"
+		},
+		"follower": {
+			"title": "跟隨的人"
+		},
+		"follow_stock": {
+			"title": "追蹤的股票"
+		},
+		"follow_community": {
+			"title": "加入的社團"
+		},
+		"running": {
+			"title": "投資組合"
+		},
+		"photo": {
+			"title": "近期照片",
+			"see_all": "觀看全部"
+		}
+	}
+}

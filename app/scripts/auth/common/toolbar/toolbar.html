@@ -1,0 +1,39 @@
+<nav class="navbar navbar-inverse navbar-static-top" ng-controller="homAuthToolbarCtrl">
+	<div class="container">
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<a type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a id="logo" class="navbar-brand" href="#/">StockBuzz</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-responsive-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+
+			<!-- left menu -->
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="#/hot/hot_discuss" translate="home.toolbar.text.hot"></a>
+				</li>
+				<li>
+					<a href="#/quote/category" translate="home.toolbar.text.quote"></a>
+				</li>
+			</ul>
+
+			<!-- right menu -->
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="#/auth/signup" translate="root.toolbar.text.signup"></a>
+				</li>
+				<li>
+					<a href="#/auth/signin" translate="root.toolbar.text.signin"></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

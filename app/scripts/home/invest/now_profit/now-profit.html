@@ -1,0 +1,88 @@
+<div id="inv-now-profit" class="widget" ng-controller="invNowProfitCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title" translate="invest.now_profit.title"></h4>
+	</div>
+
+	<div  class="widget-bd">
+		<div class="qb-table-topbar">
+			<div class="row">
+				<div class="col-xs-6">
+					<span translate="invest.now_profit.summary.keep_total"></span>
+					<span class="summary_value">{{summary.keep_total | number:0}}</span>
+					<span translate="invest.text.dollar"></span>
+				</div>
+				<div class="col-xs-6">
+					<span translate="invest.now_profit.summary.current_total"></span>
+					<span class="summary_value">{{summary.current_total | number:0}}</span>
+					<span translate="invest.text.dollar"></span>
+				</div>
+				<div class="col-xs-6">
+					<span translate="invest.now_profit.summary.profit"></span>
+					<span class="summary_value" ng-class="upDown(summary.profit)">{{positiveSign(summary.profit)}}{{summary.profit | number:0}}</span>
+					<span translate="invest.text.dollar"></span>
+				</div>
+				<div class="col-xs-6">
+					<span translate="invest.now_profit.summary.percent_profit"></span>
+					<span class="summary_value" ng-class="upDown(summary.profit)">{{positiveSign(summary.profit)}}{{summary.percent_profit * 100 | number:2}}%</span>
+				</div>
+			</div>
+		</div>
+
+		<table class="table table-striped qb-table">
+			<thead>
+				<tr>
+					<th class="ce" translate="invest.now_profit.column.code"></th>
+					<th class="ce" translate="invest.now_profit.column.stock"></th>
+					<th class="ri" translate="invest.now_profit.column.buy_share"></th>
+					<th class="ri" translate="invest.now_profit.column.sell_share"></th>
+					<th class="ri" translate="invest.now_profit.column.keep_share"></th>
+					<th class="ri" translate="invest.now_profit.column.keep_price"></th>
+					<th class="ri" translate="invest.now_profit.column.keep_total"></th>
+					<th class="ri" translate="invest.now_profit.column.current_price"></th>
+					<th class="ri" translate="invest.now_profit.column.current_total"></th>
+					<th class="ri" translate="invest.now_profit.column.profit"></th>
+					<th class="ri" translate="invest.now_profit.column.percent_profit"></th>
+					<th class="ce" translate="invest.now_profit.column.action"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="record in records">
+					<td class="ce"><a ng-href="#/stock/{{record.symbol_id}}/portal/post">{{record.code}}</a></td>
+					<td class="ce"><a ng-href="#/stock/{{record.symbol_id}}/portal/post">{{record.name}}</a></td>
+					<td class="ri">{{record.buy_share | number}}</td>
+					<td class="ri">{{record.sell_share | number}}</td>
+					<td class="ri">{{record.keep_share | number}}</td>
+					<td class="ri">{{record.keep_price | number:2}}</td>
+					<td class="ri">{{record.keep_total | number}}</td>
+					<td class="ri">{{record.current_price | number:2}}</td>
+					<td class="ri">{{record.current_total | number}}</td>
+					<td class="ri" ng-class="upDown(record.profit)">{{positiveSign(record.profit)}}{{record.profit | number}}</td>
+					<td class="ri" ng-class="upDown(record.profit)">{{positiveSign(record.profit)}}{{record.percent_profit * 100 | number:2}}%</td>
+					<td class="ce">
+						<a ng-click="lookup(record)" tooltip-placement="left" tooltip="{{'invest.text.lookup' | translate}}"><i class="fa fa-search-plus"></i></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="qb-table-bottombar text-center">
+			<pagination
+				ng-model="pagingOptions.currentPage"
+				total-items="pagingOptions.totalServerItems"
+				items-per-page="pagingOptions.pageSize"
+				max-size="10"
+				direction-links="true"
+				previous-text="&lsaquo; {{'invest.text.previous_page' | translate}}"
+				next-text="{{'invest.text.next_page' | translate}} &rsaquo;"
+				boundary-links="false"
+				first-text="&laquo; {{'invest.text.first_page' | translate}}"
+				last-text="{{'invest.text.last_page' | translate}} &raquo;"
+				ng-change="pageChanged()"
+			>
+			</pagination>
+		</div>
+
+	</div>
+
+</div>

@@ -1,0 +1,38 @@
+.module {
+	margin-bottom: @grid-gutter-width;
+	background-color: @panel-bg;
+	border-radius: @panel-border-radius;
+
+    padding: 12px;
+
+    .module-hd {
+        margin-bottom: 10px;
+
+        .title {
+            font-size: 14px;
+            color: #66757f;
+        }
+        .subtitle {
+            font-size: 12px;
+        }
+        .link {
+            float: right;
+            font-size: 12px;
+        }
+
+        .title,
+        .subtitle,
+        .link {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .module-bd {
+        ul {
+            padding-left: 12px;
+            list-style: disc;
+        }
+    }
+}

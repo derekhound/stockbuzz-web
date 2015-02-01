@@ -1,0 +1,41 @@
+<div id="photo-album" class="widget" ng-controller="phoAlbumCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title">{{getTitleStr()}}</h4>
+	</div>
+
+	<div class="widget-bd">
+
+		<!-- album -->
+		<div class="photogallery album">
+			<div class="summary" translate="photo.text.album"></div>
+
+			<div class="photo_container">
+				<div class="photo_item" ng-repeat="album in album_gallery.albums">
+					<a ng-href="#/home/photo/album_photos/{{user.username}}/{{album.album_id}}">
+						<div class="desp">
+							<span class="name">{{album.name}}</span>
+							<span class="num"><i class="fa fa-camera"></i> {{album.photo_count}}</span>
+						</div>
+
+						<img ng-src="{{album.cover.bestImg}}" />
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- latest_photo -->
+		<div class="photogallery latest_photos" infinite-scroll="getLatestPhotos()">
+			<div class="summary" translate="photo.text.latest_photos"></div>
+
+			<div class="photo_container">
+				<div class="photo_item" ng-repeat="photo in photo_gallery.photos">
+					<a ng-click="openPhotoModal(photo)">
+						<img ng-src="{{photo.bestImg}}" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,86 @@
+<div id="inv-watch" class="widget" ng-controller="invWatchCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title" translate="invest.watch.title"></h4>
+	</div>
+
+	<div class="widget-bd">
+		<div class="qb-table-topbar">
+
+			<div class="pull-right">
+				<a ng-click="add()" tooltip-placement="top" tooltip="{{'invest.text.add' | translate}}"><i class="fa fa-plus-circle fa-lg"></i></a>
+			</div>
+
+			<ul class="tags tags-inline">
+				<li ng-class="{'active': group.group_id == active_group_id}" ng-repeat="group in groups">
+					<a ng-click="selectGroup(group.group_id)">{{group.name}}</a>
+				</li>
+			</ul>
+
+			<div class="btn-group" dropdown>
+				<button type="button" class="btn btn-default btn-sm dropdown-toggle">
+					{{'invest.watch.group.group' | translate}} <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a translate="invest.watch.group.add_group" ng-click="addGroup()"></a></li>
+					<li ng-class="{'disabled': active_group_id < 100}"><a translate="invest.watch.group.edit_group" ng-click="editGroup()"></a></li>
+					<li ng-class="{'disabled': active_group_id < 100}"><a translate="invest.watch.group.delete_group" ng-click="deleteGroup()"></a></li>
+					<li ng-class="{'disabled': groups.length <= 1}"><a translate="invest.watch.group.reorder_group" ng-click="reorderGroup()"></a></li>
+				</ul>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+
+		<table class="table table-striped qb-table">
+			<thead>
+				<tr>
+					<th class="ce" translate="invest.watch.column.code"></th>
+					<th class="ce" translate="invest.watch.column.stock"></th>
+					<th class="ri" translate="invest.watch.column.price"></th>
+					<th class="ri" translate="invest.watch.column.change"></th>
+					<th class="ri" translate="invest.watch.column.percent_change"></th>
+					<th class="ri" translate="invest.watch.column.volume"></th>
+					<th class="ce" translate="invest.watch.column.buy_price"></th>
+					<th class="ce" translate="invest.watch.column.sell_price"></th>
+					<th class="text-center" translate="invest.watch.column.action"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="record in records">
+					<td class="ce"><a href="#/stock/{{record.symbol_id}}/portal/post">{{record.code}}</a></td>
+					<td class="ce"><a href="#/stock/{{record.symbol_id}}/portal/post">{{record.name}}</a></td>
+					<td class="ri" ng-class="getChangeStyle(record.change)">{{record.last_trade_price | number:2}}</td>
+					<td class="ri" ng-class="getChangeStyle(record.change)">{{positiveSign(record.change)}}{{record.change | number:2}}</td>
+					<td class="ri" ng-class="getChangeStyle(record.change)">{{positiveSign(record.change)}}{{record.percent_change * 100 | number:2}}%</td>
+					<td class="ri">{{record.volume | number}}</td>
+					<td class="ce" ng-class="getBuyPriceStyle(record)">{{getPriceStr(record.buy_price)}}</td>
+					<td class="ce" ng-class="getSellPriceStyle(record)">{{getPriceStr(record.sell_price)}}</td>
+					<td class="ce">
+						<a ng-click="edit(record)" tooltip-placement="left" tooltip="{{'invest.text.edit' | translate}}"><i class="fa fa-pencil"></i></a>
+						<span>&nbsp;</span>
+						<a ng-click="delete(record)" tooltip-placement="left" tooltip="{{'invest.text.delete' | translate}}"><i class="fa fa-minus-circle"></i></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="qb-table-bottombar text-center">
+			<pagination
+				ng-model="pagingOptions.currentPage"
+				total-items="pagingOptions.totalServerItems"
+				items-per-page="pagingOptions.pageSize"
+				max-size="10"
+				direction-links="true"
+				previous-text="&lsaquo; {{'invest.text.previous_page' | translate}}"
+				next-text="{{'invest.text.next_page' | translate}} &rsaquo;"
+				boundary-links="false"
+				first-text="&laquo; {{'invest.text.first_page' | translate}}"
+				last-text="{{'invest.text.last_page' | translate}} &raquo;"
+				ng-change="pageChanged()"
+			>
+			</pagination>
+		</div>
+	</div>
+	
+</div>

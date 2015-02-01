@@ -1,0 +1,40 @@
+<div class="widget" ng-controller="perNaviCtrl">
+	<div>
+		<ul class="navi">
+			<li class="navi-item" ng-class="{'active': isActive('person.post')}">
+				<a href="#/person/{{username}}/post">
+					<span class="name">{{'person.post.title' | translate}}</span>
+					<span class="icon"><i class="fa fa-chevron-right"></i></span>
+				</a>
+			</li>
+
+			<li class="navi-item" ng-class="{'active': isActive('person.follow_person')}">
+				<a href="#/person/{{username}}/follow_person">
+					<span class="name">{{'person.follow_person.title' | translate}}</span>
+					<span class="icon"><i class="fa fa-chevron-right"></i></span>
+				</a>
+			</li>
+
+			<li class="navi-item" ng-class="{'active': isActive('person.follower')}">
+				<a href="#/person/{{username}}/follower">
+					<span class="name">{{'person.follower.title' | translate}}</span>
+					<span class="icon"><i class="fa fa-chevron-right"></i></span>
+				</a>
+			</li>
+
+			<li class="navi-item" ng-class="{'active': isActive('person.follow_stock')}">
+				<a href="#/person/{{username}}/follow_stock">
+					<span class="name">{{'person.follow_stock.title' | translate}}</span>
+					<span class="icon"><i class="fa fa-chevron-right"></i></span>
+				</a>
+			</li>
+
+			<li class="navi-item" ng-class="{'active': isActive('person.running')}">
+				<a href="#/person/{{username}}/running">
+					<span class="name">{{'person.running.title' | translate}}</span>
+					<span class="icon"><i class="fa fa-chevron-right"></i></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

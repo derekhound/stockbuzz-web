@@ -1,0 +1,7 @@
+<div class="photo-wall">
+	<div class="pw-photo" ng-repeat="photo in photos">
+		<a ng-href="{{photo.url}}" target="_blank">
+			<img ng-src="{{photo.pw.img}}" ng-style="getResolution(photo)" />
+		</a>
+	</div>
+</div>

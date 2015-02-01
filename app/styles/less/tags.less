@@ -1,0 +1,38 @@
+.tags {
+    > li {
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        border-radius: 3px;
+
+        > a {
+            display: block;
+            padding: 5px 10px 5px 10px;
+            color: #45688E;
+            text-decoration: none;
+        }
+
+        &:hover {
+            background: #e1e7ed;
+        }
+
+        &.active {
+            background: #597DA3;
+
+            > a {
+                color: #fff;
+            }
+        }
+    }
+
+    &.tags-inline {
+        display: inline;
+    }
+
+    &.tags-block {
+        display: block;
+        .clearfix();
+    }
+
+}

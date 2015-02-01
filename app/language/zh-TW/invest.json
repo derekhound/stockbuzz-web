@@ -1,0 +1,159 @@
+{
+	"invest": {
+		"text": {
+			"previous_page": "上一頁",
+			"next_page": "下一頁",
+			"first_page": "最前頁",
+			"last_page": "最後頁",
+			"add": "新增",
+			"edit": "編輯",
+			"delete": "刪除",
+			"lookup": "查看交易記錄",
+			"monitor": "自動狀態偵測",
+			"running": "進行中",
+			"finish": "已結束",
+			"switch_state": "切換狀態",
+			"dollar": "元"
+		},
+		"watch": {
+			"title": "自選股",
+			"group": {
+				"group": "分組",
+				"add_group": "新增分組",
+				"edit_group": "編輯分組",
+				"delete_group": "刪除分組",
+				"reorder_group": "調整順序",
+				"default": {
+					"All": "全部"
+				}
+			},
+			"column": {
+				"code": "代碼",
+				"stock": "股票",
+				"price": "價格",
+				"change": "漲跌",
+				"percent_change": "漲跌幅",
+				"volume": "成交量",
+				"buy_price": "買入目標價",
+				"sell_price": "賣出目標價",
+				"action": "動作"
+			},
+			"edit_group_modal": {
+				"add_group": "新增分組",
+				"edit_group": "編輯分組",
+				"group_name": "分組名稱",
+				"cancel": "取消",
+				"confirm": "確定"
+			},
+			"delete_group_modal": {
+				"title": "刪除分組",
+				"desp": "你確定要刪除該分組嗎?",
+				"cancel": "取消",
+				"confirm": "確定"
+			},
+			"reorder_group_modal": {
+				"title": "調整順序",
+				"up": "上移",
+				"down": "下移",
+				"cancel": "取消",
+				"confirm": "確定"
+			},
+			"edit_watch_modal": {
+				"add_watch": "新增自選股",
+				"edit_watch": "編輯自選股",
+				"group": "分組",
+				"cancel": "取消",
+				"confirm": "確定"
+			},
+			"delete_watch_modal": {
+				"title": "刪除自選股",
+				"desp": "刪除股票以後，其他分組下也不會看見此股票",
+				"cancel": "取消",
+				"confirm": "確定"
+			}
+		},
+		"transaction": {
+			"title": "交易記錄",
+			"symbol_option": {
+				"hint": "全部股票"
+			},
+			"state_option": {
+				"hint": "全部狀態",
+				"running": "進行中",
+				"finish": "已結束"
+			},
+			"column": {
+				"date": "日期",
+				"type": "類型",
+				"code": "代碼",
+				"stock": "股票",
+				"share": "數量",
+				"price": "價格",
+				"comm_fee": "手續費",
+				"tranx_fee": "交易稅",
+				"total_price": "總金額",
+				"state": "狀態",
+				"action": "動作"
+			},
+			"edit_tranx_modal": {
+			 	"add_tranx": "新增交易紀錄",
+				"edit_tranx": "編輯交易紀錄",
+				"buy_spot_share": "現股買入",
+				"sell_spot_share": "現股賣出",
+				"stock_dividend": "股票股利",
+				"cash_dividend": "現金股利",
+				"running": "進行中",
+				"finish": "已結束",
+				"current_price": "目前價格",
+				"auto_calculate": "自動計算",
+				"cancel": "取消",
+				"confirm": "確定"
+			},
+			"delete_tranx_modal": {
+				"title": "刪除交易記錄",
+				"desp": "你確認要刪除這一筆交易紀錄嗎?",
+				"cancel": "取消",
+				"delete": "刪除"
+			}
+		},
+		"now_profit": {
+			"title": "當前損益",
+			"summary": {
+				"keep_total": "總成本：",
+				"current_total": "總市值：",
+				"profit": "總損益：",
+				"percent_profit": "總損益率："
+			},
+			"column": {
+				"code": "代碼",
+				"stock": "股票",
+				"buy_share": "買入股數",
+				"sell_share": "賣出股數",
+				"keep_share": "持有股數",
+				"keep_price": "持有成本",
+				"keep_total": "持有總額",
+				"current_price": "市價",
+				"current_total": "市值",
+				"profit": "損益",
+				"percent_profit": "損益率",
+				"action": "動作"
+			}
+		},
+		"past_profit": {
+			"title": "過去損益",
+			"summary": {
+				"profit": "總損益："
+			},
+			"column": {
+				"code": "代碼",
+				"stock": "股票",
+				"buy_share": "買入股數",
+				"sell_share": "賣出股數",
+				"keep_share": "持有股數",
+				"profit": "損益",
+				"percent_profit": "損益率",
+				"action": "動作"
+			}
+		}
+	}
+}

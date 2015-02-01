@@ -1,0 +1,59 @@
+<div id="search-person-filter" class="module">
+
+		<!-- Age -->
+		<div class="row">
+			<div class="col-xs-24">
+				<label translate="search.person.filter.age.title"></label>
+			</div>
+		</div>
+		<div id="age-group" class="row form-group">
+			<div class="col-xs-24">
+				<!-- from -->
+				<select id="from-age" name="from-age" class="form-control" ng-model="filter.from_age"
+						ng-options="age.value as age.name for age in from_ages">
+					<option value="" translate="search.person.filter.age.from"></option>
+				</select>
+				<span> - </span>
+				<!-- to -->
+				<select id="to-age" name="to-age" class="form-control" ng-model="filter.to_age"
+						ng-options="age.value as age.name for age in to_ages">
+					<option value="" translate="search.person.filter.age.to"></option>
+				</select>
+			</div>
+		</div>
+
+		<!-- Sex -->
+		<div class="row">
+			<div class="col-xs-24">
+				<label translate="search.person.filter.sex.title"></label>
+			</div>
+		</div>
+		<div id="sex-group" class="row form-group">
+			<div class="col-xs-24">
+				<label class="checkbox-inline">
+					<input type="radio" value="male" ng-model="filter.sex"> {{'search.person.filter.sex.male' | translate}}
+				</label>
+				<label class="checkbox-inline">
+					<input type="radio" value="female" ng-model="filter.sex"> {{'search.person.filter.sex.female' | translate}}
+				</label>
+				<label class="checkbox-inline">
+					<input type="radio" value="any" ng-model="filter.sex"> {{'search.person.filter.sex.any' | translate}}
+				</label>
+			</div>
+		</div>
+
+		<!-- Status -->
+		<div class="row">
+			<div class="col-xs-24">
+				<label translate="search.person.filter.status.title"></label>
+			</div>
+		</div>
+		<div id="status-group" class="row form-group">
+			<div class="col-xs-24">
+				<label>
+					<input type="checkbox" ng-model="filter.with_photo"> {{'search.person.filter.status.with_photo' | translate}}
+				</label>
+			</div>
+		</div>
+
+</div>

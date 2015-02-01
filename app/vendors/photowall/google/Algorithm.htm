@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0072)http://blog.vjeux.com/2012/image/image-layout-algorithm-google-plus.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta property="fb:admins" content="508536187">
+
+
+<title>Vjeux » Image Layout Algorithm – Google Plus</title>
+<meta name="generator" content="WordPress 3.8.2">
+<link rel="stylesheet" href="./Algorithm_files/style.css" type="text/css" media="screen">
+<link rel="shortcut icon" type="image/ico" href="http://blog.vjeux.com/favicon.png">
+<link rel="alternate" type="application/rss+xml" title="Vjeux RSS Feed" href="http://blog.vjeux.com/feed">
+<link rel="pingback" href="http://blog.vjeux.com/xmlrpc.php">
+<script async="" src="./Algorithm_files/image-layout-algorithm-google-plus.html"></script><script type="text/javascript" async="" src="./Algorithm_files/ga.js"></script><script id="twitter-wjs" src="./Algorithm_files/widgets.js"></script><script src="./Algorithm_files/jquery-1.4.min.js"></script>
+
+
+<script src="./Algorithm_files/jquery.tools.min.js"></script> 
+
+<style>
+.panes > div {
+	display:none;		
+	padding:1px 10px;
+	border:1px solid #999;
+	border-top:0;
+}
+</style>
+	
+<script src="./Algorithm_files/highcharts.min.js"></script>
+<link rel="alternate" type="application/rss+xml" title="Vjeux » Image Layout Algorithm – Google Plus Comments Feed" href="http://blog.vjeux.com/2012/image/image-layout-algorithm-google-plus.html/feed">
+<link rel="stylesheet" id="wp-syntax-css-css" href="./Algorithm_files/wp-syntax.css" type="text/css" media="all">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.vjeux.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.vjeux.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Image Layout Algorithm – Lightbox" href="http://blog.vjeux.com/2012/image/image-layout-algorithm-lightbox.html">
+<link rel="next" title="CSS – Cross Browser Drag Cursor" href="http://blog.vjeux.com/2012/css/css-cross-browser-drag-cursor.html">
+<meta name="generator" content="WordPress 3.8.2">
+<link rel="canonical" href="./Algorithm_files/Algorithm.htm">
+<link rel="shortlink" href="http://blog.vjeux.com/?p=3229">
+<script type="text/javascript">
+	window._wp_rp_static_base_url = 'http://dtmvdvtzf8rz0.cloudfront.net/static/';
+	window._wp_rp_wp_ajax_url = "http://blog.vjeux.com/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.1';
+	window._wp_rp_post_id = '3229';
+	window._wp_rp_num_rel_posts = '5';
+</script>
+<script type="text/javascript" async="" src="./Algorithm_files/embed.js"></script><style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><script src="./Algorithm_files/alfie.f51946af45e0b561c60f768335c9eb79.js" async="" charset="UTF-8"></script></head>
+
+<body data-twttr-rendered="true">
+
+<div id="page">
+
+	<div id="header">
+		<div class="header_wrapper">
+			<div class="header_left">
+				<h1><a href="http://blog.vjeux.com/">Vjeux</a></h1>
+				<h2>French Web Developer</h2>
+			</div>
+			
+			<div class="header_right">
+				<ul>
+				<li><a href="http://blog.vjeux.com/">Home</a></li>
+        <li class="page_item page-item-2341"><a href="http://blog.vjeux.com/all-posts">All posts</a></li>
+<li class="page_item page-item-157"><a href="http://blog.vjeux.com/cv">Curriculum Vitae</a></li>
+<li class="page_item page-item-1263"><a href="http://blog.vjeux.com/reports">Talks &amp; Written Reports</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><div id="container">
+	<div id="main">
+    		<div class="post" id="post-3229">
+			<div class="postdate">
+				<div class="month">Jul</div>
+        <div class="date">13</div>
+      </div><!-- end postdate -->
+      <div class="title">
+				<h2><a href="./Algorithm_files/Algorithm.htm" rel="bookmark" title="Permanent Link to Image Layout Algorithm – Google Plus">Image Layout Algorithm – Google Plus</a></h2>
+				<div class="postmeta">
+					<span class="postmeta_author">vjeux</span>
+					<span class="postmeta_category"><a href="http://blog.vjeux.com/category/image" title="View all posts in Image" rel="category tag">Image</a></span>					
+					<span class="postmeta_time">2012-07-13</span>
+				</div><!-- end postmeta -->
+		  </div><!-- end title -->
+        
+      <div class="entry">
+				<div style="background: #FAF9E2; border: solid #DDDAAA; border-width: initial; color: #5D5636; margin-bottom: 0em; padding: 0.75em 15px; text-align: center;">Layout Algorithms: <a href="http://blog.vjeux.com/2012/javascript/image-layout-algorithm-facebook.html">Facebook</a> | <strong>Google Plus</strong> | <a href="http://blog.vjeux.com/2012/javascript/image-layout-algorithm-lightbox.html">Lightbox</a> | <a href="http://blog.vjeux.com/2012/javascript/image-layout-algorithm-lightbox-android.html">Lightbox Android</a> | <a href="http://blog.vjeux.com/2012/javascript/image-layout-algorithm-500px.html">500px</a></div>
+<p>Google Plus has a really nice image gallery. They somehow managed to display all the photos without cropping, without reordering and without any holes. We are going to see how they did it in this blog post.</p>
+<div style="text-align: center;"><a href="http://blog.vjeux.com/wp-content/uploads/2012/05/google-layout.html"><img src="./Algorithm_files/gplusexample.png"></a></div>
+<h3>How does it work?</h3>
+<div style="text-align: center;"><img src="./Algorithm_files/initial_images.png"></div>
+<p>Here we have three images with various sizes and aspect ratio and we want to display them in the page. The layout algorithm is the consequence of one clever trick: <strong>all the images of the same row are have the same height</strong>.</p>
+<div style="text-align: center;"><img src="./Algorithm_files/wanted_result.png"></div>
+<p>So the only unknown is H, the height of the row given the three images we want to show. Using some basic math, we can solve the problem!</p>
+<div style="text-align: center;"><img src="./Algorithm_files/h.png"></div>
+<p>So now we know how to calculate H, the height of all the images. Since we want to keep aspect ratio, we can also calculate their width. As you can see, it is trivial to generalize the operation to n images.</p>
+<h3>How many images?</h3>
+<p>Now the tricky part is to decide how many images we want to put in the row. I came up with a solution that gives similar results to Google Plus but I'm not 100% sure that's how they do it.</p>
+<p>One fact you can observe is the fact that few images leads to a huge row while many images lead to a small row.</p>
+<div style="text-align: center;"><img src="./Algorithm_files/threshold.png" style="width: 100%;"></div>
+<p>So the idea is to try adding one image at a time and have a threshold for the maximum height we want. Once the row is smaller than this threshold, we render it!</p>
+<h3>Conclusion</h3>
+<p>Check out the <a href="http://blog.vjeux.com/wp-content/uploads/2012/05/google-layout.html">Demo</a>! Here's a little Pro/Con to know if this technique will fit your needs.</p>
+<p>Pros:</p>
+<ul>
+<li>No cropping</li>
+<li>No reordering</li>
+<li>No holes</li>
+<li>Arbitrary Width</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Portrait images are much smaller than landscape ones</li>
+<li>All the rows do not have the same height</li>
+<li>The view feels a bit chaotic with no clear structure</li>
+<li>Requires dynamic resize of images</li>
+</ul>
+<p>Some other implementations I found on the internet:</p>
+<ul>
+<li><a href="http://www.flickr.com/explore">Flickr Explore tab</a></li>
+<li><a href="http://www.wackylabs.net/2012/03/flickr-justified-layout-in-jquery/">Flickr ‘Justified’ Layout in JQuery</a></li>
+<li><a href="http://fmaul.de/gallery-grid-example/">Florian Maul</a>: All rows are the same height, cropping to fit.</li>
+<li><a href="http://moewashere.com/jglance/demo.php">Moeishaa</a>: Every time the same number of images per row.</li>
+<li><a href="http://erikloyer.com/index.php/blog/the_slabtype_algorithm_part_1_background/">SlabType</a>: A layout algorithm for headlines that uses a similar approach.</li>
+</ul>
+			  <div style="clear:both;"></div>
+			</div><!-- end entry -->
+
+	<div class="promo">
+		<img src="./Algorithm_files/at-twitter.png"> 
+		<div class="tweet">
+			<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Algorithm_files/tweet_button.1397165098.htm" class="twitter-share-button twitter-tweet-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 110px; height: 20px;"></iframe>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		If you liked this article, you might be interested in my <a href="http://www.twitter.com/vjeux/" target="_blank">Twitter feed</a> as well.
+	</div>
+		<div style="border-bottom: 1px dashed #CCC;">&nbsp;</div>
+
+          </div><!-- end post --> 
+    
+		<div class="navi" style="text-align: center;">
+			<a href="http://blog.vjeux.com/all-posts">All Posts</a>
+			<div class="left">« <a href="http://blog.vjeux.com/2012/css/css-cross-browser-drag-cursor.html" rel="next">CSS – Cross Browser Drag Cursor</a></div>
+			<div class="right"><a href="http://blog.vjeux.com/2012/image/image-layout-algorithm-lightbox.html" rel="prev">Image Layout Algorithm – Lightbox</a>  »</div>
+			<div style="clear:both;"></div>
+		</div><!-- end navi -->
+    
+		
+<div id="disqus_thread"><iframe id="dsq-2" data-disqus-uid="2" allowtransparency="true" frameborder="0" tabindex="0" title="Disqus" width="100%" src="./Algorithm_files/saved_resource.htm" scrolling="no" horizontalscrolling="no" verticalscrolling="no" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 1109px !important;"></iframe></div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://blog.vjeux.com/2012/image/image-layout-algorithm-google-plus.html';
+    var disqus_identifier = '3229 http://blog.vjeux.com/?p=3229';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'vjeuxblog';
+    var disqus_title = "Image Layout Algorithm &#8211; Google Plus";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '?cf_action=sync_comments&post_id=3229';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/blog.vjeux.com\/2012\/image\/image-layout-algorithm-google-plus.html\/trackback"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/embed.js?pname=wordpress&pver=2.74';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+		<div style="border-bottom: 1px dashed #CCC;">&nbsp;</div>
+
+		
+<div class="wp_rp_wrap  wp_rp_plain" id="wp_rp_first"><div class="wp_rp_content"><h3 class="related_post_title">Related Posts</h3><ul class="related_post wp_rp" style="visibility: visible"><li>August 13, 2012 -- <a href="http://blog.vjeux.com/2012/image/image-layout-algorithm-facebook.html" class="wp_rp_title">Image Layout Algorithm – Facebook</a> (1)<br><small>Layout Algorithms: Facebook | Google Plus | Lightbox | Lightbox Android | 500px
+
+For the redesign of the Photo Section of Facebook we wanted to highlight some photos by making them bigger. It all started with the following mock by Andy Chung:
+
+
+
+
+
+Layout
+Alternated Blocks
+My first shot ...</small></li><li>July 8, 2012 -- <a href="http://blog.vjeux.com/2012/image/image-layout-algorithm-lightbox.html" class="wp_rp_title">Image Layout Algorithm – Lightbox</a> (1)<br><small>Layout Algorithms: Facebook | Google Plus | Lightbox | Lightbox Android | 500px
+
+
+Lightbox.com has a really interesting image layout algorithm. We're going to see how it works and its best use case.
+
+
+
+How does it work?
+
+Column based
+
+The algorithm is column based. You pick a number of...</small></li><li>July 7, 2012 -- <a href="http://blog.vjeux.com/2012/image/css-understanding-percentage-background-position.html" class="wp_rp_title">CSS – Understanding Percentage Background Position</a> (6)<br><small>In this article, I'm going to guide you through a concrete problem I had to solve. Eventually, we'll see how to use percentage values in the background-position CSS property and how it solves a lot of tough issues.
+
+Usual way
+
+Positioning the image
+
+The usual way to position images inside a...</small></li><li>September 22, 2011 -- <a href="http://blog.vjeux.com/2011/javascript/urlon-url-object-notation.html" class="wp_rp_title">URLON: URL Object Notation</a> (42)<br><small>
+#json, #urlon, #rison {
+  width: 100%;
+  font-size: 12px;
+  padding: 5px;
+  height: 18px;
+  color: #560061;
+}
+
+I am in the process of rewriting MMO-Champion Tables and I want a generic way to manage the hash part of the URL (#table__search_results_item=4%3A-slot). I no longer want to wr...</small></li><li>August 14, 2012 -- <a href="http://blog.vjeux.com/2012/image/image-layout-algorithm-facebook-reordering.html" class="wp_rp_title">Image Layout Algorithm – Facebook – Reordering</a> (2)<br><small>In this article, we are going to see how to support dynamic updates to Facebook Image Layout Algorithm. Beware, this is not an easy task and there are many special cases to handle :)
+
+Making images bigger
+To make images bigger we just run the algorithm all over again with the new image being b...</small></li></ul><div class="wp_rp_footer"><a class="wp_rp_backlink" target="_blank" href="http://www.zemanta.com/?wp-related-posts" rel="nofollow">Zemanta</a></div></div></div>
+
+				 
+	</div><!-- end main --> 
+<!-- Vjeux: Ca sert a rien c'est pas utilise ... -->
+<!-- Appearance / Widgets / Text -->
+
+<div id="sidebar">
+	<ul>
+		<li id="search">
+  <form id="searchform" action="http://blog.vjeux.com/" method="get">
+	<input type="text" id="searchinput" name="s" class="searchinput">
+	<input type="submit" id="searchsubmit" value="">
+	</form>
+</li>
+<li id="text-3" class="widget widget_text"><h2 class="widgettitle">About Me</h2>
+			<div class="textwidget"><ul>
+<li><a href="http://blog.vjeux.com/reports/">Talks &amp; Written Reports</a></li>
+<li>Mail, Gtalk: <a href="mailto: vjeuxx@gmail.com">vjeuxx@gmail.com</a></li>
+</ul></div>
+		</li>
+		<li id="recent-posts-3" class="widget widget_recent_entries">		<h2 class="widgettitle">Recent Posts</h2>
+		<ul>
+					<li>
+				<a href="http://blog.vjeux.com/2014/javascript/hack-is-to-php-what-es6-is-to-javascript.html">Hack is to PHP what ES6 is to JavaScript</a>
+						</li>
+					<li>
+				<a href="http://blog.vjeux.com/2013/javascript/jsx-e4x-the-good-parts.html">JSX: E4X The Good Parts</a>
+						</li>
+					<li>
+				<a href="http://blog.vjeux.com/2013/javascript/bitwise-truthiness.html">Bitwise Truthiness</a>
+						</li>
+					<li>
+				<a href="http://blog.vjeux.com/2013/javascript/scroll-position-with-react.html">Scroll Position with React</a>
+						</li>
+					<li>
+				<a href="http://blog.vjeux.com/2013/javascript/jsx-for-the-real-dom.html">JSX for the real DOM</a>
+						</li>
+					<li>
+				<a href="http://blog.vjeux.com/2013/javascript/react-coffeescript.html">React &amp; CoffeeScript</a>
+						</li>
+					<li>
+				<a href="http://blog.vjeux.com/2013/javascript/custom-components-react-x-tags.html">Custom Components: React &amp; x-tags</a>
+						</li>
+					<li>
+				<a href="http://blog.vjeux.com/2013/javascript/javascript-private-methods-are-not-really-private.html">Javascript – Private methods are not really private</a>
+						</li>
+					<li>
+				<a href="http://blog.vjeux.com/2013/javascript/conversion-from-uint8-to-int8-x-24.html">Conversion from uint8 to int8 (x &lt;&lt; 24 &gt;&gt; 24)</a>
+						</li>
+					<li>
+				<a href="http://blog.vjeux.com/2013/javascript/xson-smallest-json-equivalent-in-xml.html">XSON – Smallest JSON equivalent in XML</a>
+						</li>
+				</ul>
+		</li>
+<li id="text-4" class="widget widget_text"><h2 class="widgettitle">@vjeux on Twitter</h2>
+			<div class="textwidget" data-twttr-id="twttr-sandbox-0"><iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" src="./Algorithm_files/follow_button.1397165098.htm" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 203px; height: 20px;"></iframe>
+<iframe id="twitter-widget-2" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-timeline twitter-timeline-rendered" style="border: none; max-width: 100%; min-width: 180px;" title="Twitter Timeline" width="250" height="600"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+		</li>
+<li id="categories-3" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+		<ul>
+	<li class="cat-item cat-item-18"><a href="http://blog.vjeux.com/category/c" title="View all posts filed under C++">C++</a> (1)
+</li>
+	<li class="cat-item cat-item-11"><a href="http://blog.vjeux.com/category/css" title="View all posts filed under CSS">CSS</a> (8)
+</li>
+	<li class="cat-item cat-item-8"><a href="http://blog.vjeux.com/category/epita" title="View all posts filed under EPITA">EPITA</a> (12)
+</li>
+	<li class="cat-item cat-item-19"><a href="http://blog.vjeux.com/category/facebook" title="View all posts filed under Facebook">Facebook</a> (3)
+</li>
+	<li class="cat-item cat-item-21"><a href="http://blog.vjeux.com/category/image" title="View all posts filed under Image">Image</a> (13)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://blog.vjeux.com/category/javascript" title="View all posts filed under Javascript">Javascript</a> (54)
+</li>
+	<li class="cat-item cat-item-16"><a href="http://blog.vjeux.com/category/lisp" title="View all posts filed under Lisp">Lisp</a> (3)
+</li>
+	<li class="cat-item cat-item-10"><a href="http://blog.vjeux.com/category/makefile" title="View all posts filed under Makefile">Makefile</a> (1)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://blog.vjeux.com/category/mysql" title="View all posts filed under MySQL">MySQL</a> (2)
+</li>
+	<li class="cat-item cat-item-5"><a href="http://blog.vjeux.com/category/php" title="View all posts filed under PHP">PHP</a> (2)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://blog.vjeux.com/category/project" title="View all posts filed under Project">Project</a> (15)
+</li>
+	<li class="cat-item cat-item-17"><a href="http://blog.vjeux.com/category/python" title="View all posts filed under Python">Python</a> (1)
+</li>
+	<li class="cat-item cat-item-6"><a href="http://blog.vjeux.com/category/analysis" title="View all posts filed under Research">Research</a> (6)
+</li>
+	<li class="cat-item cat-item-20"><a href="http://blog.vjeux.com/category/talk" title="View all posts filed under talk">talk</a> (1)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://blog.vjeux.com/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> (1)
+</li>
+		</ul>
+</li>
+<li id="linkcat-2" class="widget widget_links"><h2 class="widgettitle">Blogroll</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="http://blog.marquegnies.com/" title="by Julien Marquegnies">&lt;/&gt; blog</a>
+by Julien Marquegnies</li>
+<li><a href="http://blog.delroth.net/" title="by delroth">A bit of reverse engineering</a>
+by delroth</li>
+<li><a href="http://gauth.fr/" title="by Gauth">AR.Drone &amp; Golf Blog</a>
+by Gauth</li>
+<li><a href="http://felix.abecassis.me/" title="by Felix Abecassis">Blog</a>
+by Felix Abecassis</li>
+<li><a href="http://vermeille.fr/" title="by Vermeille">C++ and Haskell</a>
+by Vermeille</li>
+<li><a href="http://thomas-sanchez.net/" title="by Thomas Sanchez">C++ Carnets</a>
+by Thomas Sanchez</li>
+<li><a href="http://enki-tech.blogspot.fr/" title="by Enki">Technical blog</a>
+by Enki</li>
+<li><a href="http://blog.pkh.me/" rel="friend" title="by Ubitux" target="_blank">The Last Static Blog</a>
+by Ubitux</li>
+
+	</ul>
+</li>
+
+		
+	</ul><!-- end ul -->
+
+<div style="text-align: center; margin-top: -10px; padding-bottom: 10px;">
+<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" title="JavaScript JS Documentation: JS String charAt, JavaScript String charAt, JS String .charAt, JavaScript String .charAt"><img src="./Algorithm_files/promotejshs.png" height="150" width="180" alt="JavaScript JS Documentation: JS String charAt, JavaScript String charAt, JS String .charAt, JavaScript String .charAt"></a>
+</div>
+
+</div><!-- end sidebar --></div><!-- end container -->
+<div id="footer">
+	<div class="footer_wrapper">
+		<div class="footer_left">
+			<a href="http://blog.vjeux.com/" title="Vjeux">Vjeux</a> · <a href="http://imotta.cn/" title="Coogee Theme">coogee theme</a> · 2008
+		</div>
+		<div class="footer_right">
+			<a href="http://blog.vjeux.com/feed" title="Subscribe Vjeux">RSS Feed</a> · <a href="http://wordpress.org/" title="Powered by WordPress 3.8.2">WordPress</a> · <a href="http://blog.vjeux.com/2012/image/image-layout-algorithm-google-plus.html#" title="Back to top">TOP</a>
+		</div>
+	</div><!-- end footer_wrapper -->
+</div><!-- end footer -->
+</div><!-- end page -->
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount','UA-387204-4']);
+_gaq.push(['_trackPageview'],['_trackPageLoadTime']);
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" style="display: none;"></iframe></body></html>

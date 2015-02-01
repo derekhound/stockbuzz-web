@@ -1,0 +1,56 @@
+.photogallery {
+
+    .summary {
+        padding: 0 0 4px 0;
+        margin: 0 8px;
+        font-weight: bold;
+        border-bottom: 1px solid #f1f1f1;
+
+        .divider {
+            padding: 0 4px;
+            color: #808080;
+        }
+    }
+
+    .photo_container {
+        margin-top: 4px;
+
+        .photo_item {
+            display: inline-block;
+            padding: 8px;
+
+            a {
+                position: relative;
+                display: block;
+                width: 272px;
+                height: 182px;
+                overflow: hidden;
+                background: #f1f1f1;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+
+                img {
+                    width: 272px;
+                }
+
+                .desp {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    padding: 1px 8px 3px 8px;
+                    color: #fff;
+                    background: rgba(0, 0, 0, 0.5);
+
+                    .name {
+                        float: left;
+                    }
+                    .num {
+                        float: right;
+                        margin-top: 2px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

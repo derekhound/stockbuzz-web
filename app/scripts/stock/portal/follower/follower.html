@@ -1,0 +1,35 @@
+<div id="per-follow" class="widget" ng-controller="perFollowerCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title" translate="stock.follower.title"></h4>
+	</div>
+
+	<ul class="user-list" infinite-scroll="getList()">
+		<li ng-repeat="item in list.items">
+
+			<!-- menu -->
+			<div class="menu">
+				<button class="btn btn-follow btn-sm btn-follow" ng-class="[getFollowBtnStyle(item)]" ng-click="toggleFollow(item)">{{getFollowBtnString(item)}}</button>
+			</div>
+
+			<!-- avatar -->
+			<a ng-href="#/person/{{item.username}}/post">
+				<img ng-src="{{item.avatarM}}" class="avatar avatarM">
+			</a>
+
+			<!-- content -->
+			<div class="content">
+
+				<div class="item-hd">
+					<a ng-href="#/person/{{item.username}}/post" class="fullname">{{item.fullname}}</a>&nbsp;
+					<a ng-href="#/person/{{item.username}}/post" class="username">@{{item.username}}</a>
+				</div>
+
+				<div class="item-bd">
+					<div class="content" ng-bind-html="item.biographic"></div>
+				</div>
+			</div>
+		</li>
+	</ul>
+
+</div>

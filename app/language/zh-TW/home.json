@@ -1,0 +1,37 @@
+{
+	"home": {
+		"toolbar": {
+			"text": {
+				"login": "登入",
+				"index": "首頁",
+				"hot": "熱門",
+				"quote": "行情",
+				"search": "搜尋"
+			},
+			"search_bar": {
+				"hint": "搜尋朋友和股票"
+			},
+			"setting": {
+				"setting": "設定",
+				"logout": "登出"
+			}
+		},
+		"sidebar": {
+			"index": {
+				"header": "快速連結",
+				"person": "個人頁面",
+				"news": "動態消息",
+				"favorite": "我的收藏",
+				"photo": "我的照片",
+				"setting": "我的設定"
+			},
+			"invest": {
+				"header": "投資筆記",
+				"watch": "自選股票",
+				"transaction": "交易記錄",
+				"now_profit": "當前損益",
+				"past_profit": "過去損益"
+			}
+		}
+	}
+}

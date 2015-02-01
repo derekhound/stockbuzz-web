@@ -1,0 +1,794 @@
+{
+	"auth": {
+		"signin": {
+			"title": "登入 StockBuzz",
+			"form": {
+				"email": "電子郵件",
+				"password": "密碼",
+				"remember_me": "記住我",
+				"ok": "登入"
+			},
+			"help": {
+				"forgot_your": "忘記你的",
+				"password": "密碼"
+			},
+			"text": {
+				"quick_login": "快速登入",
+				"facebook_login": "使用Facebook快速登入",
+				"email_login": "透過電子郵件登入",
+				"join_site_first_time": "新加入 StockBuzz?",
+				"join_immediately": "立即加入",
+				"already_activate": "已經透過電子郵件啟動帳號?",
+				"send_activate_email": "重新寄送認證信"
+			}
+		},
+		"signup": {
+			"title": "今天就加入 StockBuzz",
+			"form": {
+				"fullname": "全名",
+				"email": "電子郵件",
+				"password": "密碼",
+				"password_confirm": "確認密碼",
+				"username": "使用者帳號",
+				"birthday": "生日",
+				"sex": "性別",
+				"ok": "免費註冊"
+			},
+			"help": {
+				"S_OK": "OK",
+				"I_FULLNAME": "輸入你的真實姓名，讓你認識的人可以找到你",
+				"I_EMAIL": "請填寫有效電子郵件，稍後將會收到認證信",
+				"I_PASSWORD": "6個字元以上，只允許英數字元、些許特殊字元",
+				"I_USERNAME": "使用者帳號是必須的，英數字元和底線",
+				"E_EMAIL": "必須為正確的電子郵件",
+				"E_EMAIL_ALREADY_USE": "電子郵件已經被使用",
+				"E_PASSWORD_PATTERN": "含有不合法的字元",
+				"E_PASSWORD_LENGTH": "最少6個字元，最多不超過20個字元",
+				"E_MATCH": "密碼不一致",
+				"E_USERNAME_PATTERN": "含有不合法的字元",
+				"E_USERNAME_LENGTH": "最少6個字元，最多不超過20個字元",
+				"E_USERNAME_ALREADY_USE": "使用者帳號已經被使用"
+			},
+			"text": {
+				"year": "年",
+				"month": "月",
+				"day": "日",
+				"male": "男性",
+				"female": "女性",
+				"already_register_account": "已經申請過帳號?",
+				"signin": "登入"
+			},
+			"notice": {
+				"success": "帳號建立成功，請收取電子郵件"
+			}
+		},
+		"activate": {
+			"title": "認證中",
+			"desp": "目前已經連線到伺服器，為你的帳號做認證，請稍候。",
+			"notice": {
+				"activate_success": "帳號已啟動"
+			}
+		},
+		"forgot_password": {
+			"title": "忘記密碼?",
+			"form": {
+				"email": "電子郵件",
+				"ok": "提交"
+			},
+			"help": {
+				"E_EMAIL": "必須為正確的電子郵件"
+			},
+			"text": {
+				"do_you_need_help": "需要幫助嗎?",
+				"contact_us": "聯絡我們"
+			},
+			"notice": {
+				"success": "已經寄送密碼重設信件，請收取電子郵件"
+			}
+		},
+		"reset_password": {
+			"title": "重新設定密碼",
+			"form": {
+				"new_password": "新密碼",
+				"new_password_confirm": "確認新密碼",
+				"ok": "提交"
+			},
+			"help": {
+				"S_OK": "OK",
+				"I_PASSWORD": "6個字元以上，只允許英數字元、些許特殊字元",
+				"E_PASSWORD_PATTERN": "含有不合法的字元",
+				"E_PASSWORD_LENGTH": "最少6個字元，最多不超過20個字元",
+				"E_MATCH": "密碼不一致"
+			},
+			"notice": {
+				"success": "密碼變更成功"
+			}
+		},
+		"send_activation_email": {
+			"title": "重新寄送認證信?",
+			"form": {
+				"email": "電子郵件",
+				"ok": "提交"
+			},
+			"notice": {
+				"success": "寄送認證信成功"
+			},
+			"text": {
+				"already_receive_email": "已經收到認證信? 點擊郵件上的連結啟動帳號?"
+			}
+		},
+		"signin_modal": {
+			"text": {
+				"login": "登入 StockBuzz",
+				"signup_desp": "還沒有用 StockBuzz ? 立即申請, 當自己關心的事情一有消息, 馬上獲得第一手資訊"
+			},
+			"field": {
+				"email": "電子郵件",
+				"password": "密碼",
+				"remember": "記住我",
+				"forgot_password": "忘記密碼"
+			},
+			"button": {
+				"sigin": "登入",
+				"signup": "立即註冊"
+			},
+			"message": {
+				"please_login": "請輸入電子郵件與密碼",
+				"not_authorized": "你沒有操作權限,你想要用其他帳號登入嗎?",
+				"not_authenticated": "你必須要登入後取得操作權限",
+				"invalid_credentials": "登入失敗.請檢查電子郵件或密碼是否正確."
+			}
+		}
+	},
+	"filter": {
+		"moment": {
+			"now": "現在",
+			"month": "月",
+			"day": "日",
+			"seconds": "秒鐘",
+			"minutes": "分鐘",
+			"hours": "小時"
+		}
+	},
+	"home": {
+		"toolbar": {
+			"text": {
+				"login": "登入",
+				"index": "首頁",
+				"hot": "熱門",
+				"quote": "行情",
+				"search": "搜尋"
+			},
+			"search_bar": {
+				"hint": "搜尋朋友和股票"
+			},
+			"setting": {
+				"setting": "設定",
+				"logout": "登出"
+			}
+		},
+		"sidebar": {
+			"index": {
+				"header": "快速連結",
+				"person": "個人頁面",
+				"news": "動態消息",
+				"favorite": "我的收藏",
+				"photo": "我的照片",
+				"setting": "我的設定"
+			},
+			"invest": {
+				"header": "投資筆記",
+				"watch": "自選股票",
+				"transaction": "交易記錄",
+				"now_profit": "當前損益",
+				"past_profit": "過去損益"
+			}
+		}
+	},
+	"hot": {
+		"sidebar": {
+			"index": {
+				"header": "快速連結",
+				"hot_discuss": "熱門討論",
+				"hot_news": "熱門新聞",
+				"hot_announce": "熱門公告",
+				"new_post": "最新推文"
+			}
+		}
+	},
+	"invest": {
+		"text": {
+			"previous_page": "上一頁",
+			"next_page": "下一頁",
+			"first_page": "最前頁",
+			"last_page": "最後頁",
+			"add": "新增",
+			"edit": "編輯",
+			"delete": "刪除",
+			"lookup": "查看交易記錄",
+			"monitor": "自動狀態偵測",
+			"running": "進行中",
+			"finish": "已結束",
+			"switch_state": "切換狀態",
+			"dollar": "元"
+		},
+		"watch": {
+			"title": "自選股",
+			"group": {
+				"group": "分組",
+				"add_group": "新增分組",
+				"edit_group": "編輯分組",
+				"delete_group": "刪除分組",
+				"reorder_group": "調整順序",
+				"default": {
+					"All": "全部"
+				}
+			},
+			"column": {
+				"code": "代碼",
+				"stock": "股票",
+				"price": "價格",
+				"change": "漲跌",
+				"percent_change": "漲跌幅",
+				"volume": "成交量",
+				"buy_price": "買入目標價",
+				"sell_price": "賣出目標價",
+				"action": "動作"
+			},
+			"edit_group_modal": {
+				"add_group": "新增分組",
+				"edit_group": "編輯分組",
+				"group_name": "分組名稱",
+				"cancel": "取消",
+				"confirm": "確定"
+			},
+			"delete_group_modal": {
+				"title": "刪除分組",
+				"desp": "你確定要刪除該分組嗎?",
+				"cancel": "取消",
+				"confirm": "確定"
+			},
+			"reorder_group_modal": {
+				"title": "調整順序",
+				"up": "上移",
+				"down": "下移",
+				"cancel": "取消",
+				"confirm": "確定"
+			},
+			"edit_watch_modal": {
+				"add_watch": "新增自選股",
+				"edit_watch": "編輯自選股",
+				"group": "分組",
+				"cancel": "取消",
+				"confirm": "確定"
+			},
+			"delete_watch_modal": {
+				"title": "刪除自選股",
+				"desp": "刪除股票以後，其他分組下也不會看見此股票",
+				"cancel": "取消",
+				"confirm": "確定"
+			}
+		},
+		"transaction": {
+			"title": "交易記錄",
+			"symbol_option": {
+				"hint": "全部股票"
+			},
+			"state_option": {
+				"hint": "全部狀態",
+				"running": "進行中",
+				"finish": "已結束"
+			},
+			"column": {
+				"date": "日期",
+				"type": "類型",
+				"code": "代碼",
+				"stock": "股票",
+				"share": "數量",
+				"price": "價格",
+				"comm_fee": "手續費",
+				"tranx_fee": "交易稅",
+				"total_price": "總金額",
+				"state": "狀態",
+				"action": "動作"
+			},
+			"edit_tranx_modal": {
+				"add_tranx": "新增交易紀錄",
+				"edit_tranx": "編輯交易紀錄",
+				"buy_spot_share": "現股買入",
+				"sell_spot_share": "現股賣出",
+				"stock_dividend": "股票股利",
+				"cash_dividend": "現金股利",
+				"running": "進行中",
+				"finish": "已結束",
+				"current_price": "目前價格",
+				"auto_calculate": "自動計算",
+				"cancel": "取消",
+				"confirm": "確定"
+			},
+			"delete_tranx_modal": {
+				"title": "刪除交易記錄",
+				"desp": "你確認要刪除這一筆交易紀錄嗎?",
+				"cancel": "取消",
+				"delete": "刪除"
+			}
+		},
+		"now_profit": {
+			"title": "當前損益",
+			"summary": {
+				"keep_total": "總成本：",
+				"current_total": "總市值：",
+				"profit": "總損益：",
+				"percent_profit": "總損益率："
+			},
+			"column": {
+				"code": "代碼",
+				"stock": "股票",
+				"buy_share": "買入股數",
+				"sell_share": "賣出股數",
+				"keep_share": "持有股數",
+				"keep_price": "持有成本",
+				"keep_total": "持有總額",
+				"current_price": "市價",
+				"current_total": "市值",
+				"profit": "損益",
+				"percent_profit": "損益率",
+				"action": "動作"
+			}
+		},
+		"past_profit": {
+			"title": "過去損益",
+			"summary": {
+				"profit": "總損益："
+			},
+			"column": {
+				"code": "代碼",
+				"stock": "股票",
+				"buy_share": "買入股數",
+				"sell_share": "賣出股數",
+				"keep_share": "持有股數",
+				"profit": "損益",
+				"percent_profit": "損益率",
+				"action": "動作"
+			}
+		}
+	},
+	"notice": {
+		"backend": {
+			"unauthorized_error": "你必須要登入後取得操作權限",
+			"internal_server_error": "伺服器連線發生問題",
+			"unknow_error": "伺服器連線發生不明問題"
+		}
+	},
+	"person": {
+		"text": {
+			"no_data": "目前沒有任何資料"
+		},
+		"stat": {
+			"post": "推文",
+			"following": "關注",
+			"follower": "跟隨"
+		},
+		"btn_follow": {
+			"edit": "編輯資料",
+			"unfollow": "關注",
+			"follow": "正在關注"
+		},
+		"profile": {
+			"30_days": "30天",
+			"90_days": "90天",
+			"365_days": "365天",
+			"30_days_hint": "最近30天的績效",
+			"90_days_hint": "最近90天的績效",
+			"365_days_hint": "最近365天的績效"
+		},
+		"post": {
+			"title": "我的推文"
+		},
+		"follow_person": {
+			"title": "關注的人"
+		},
+		"follower": {
+			"title": "跟隨的人"
+		},
+		"follow_stock": {
+			"title": "追蹤的股票"
+		},
+		"follow_community": {
+			"title": "加入的社團"
+		},
+		"running": {
+			"title": "投資組合"
+		},
+		"photo": {
+			"title": "近期照片",
+			"see_all": "觀看全部"
+		}
+	},
+	"photo": {
+		"text": {
+			"album": "相簿",
+			"latest_photos": "最近的相片",
+			"previous_page": "回上頁",
+			"close": "關閉",
+			"my_photos": "我的照片",
+			"someone_photos": "{{fullname}} 的照片"
+		},
+		"default_album": {
+			"profile_album": "大頭貼照片",
+			"wall_album": "動態消息照片"
+		},
+		"album": {
+			"title": "我的照片"
+		},
+		"album_photos": {
+			"title": "我的照片"
+		},
+		"photo_modal": {
+			"album": "相簿:",
+			"added_by": "建立者:",
+			"delete": "刪除照片"
+		}
+	},
+	"portal": {
+		"hot_news": {
+			"title": "熱門新聞",
+			"link": "更多"
+		}
+	},
+	"quote": {
+		"text": {},
+		"rank": {},
+		"category": {
+			"title": "類股行情",
+			"column": {
+				"code": "代碼",
+				"name": "股票",
+				"last_trade_price": "成交",
+				"change": "漲跌",
+				"percent_change": "漲跌幅",
+				"previous_close": "昨收",
+				"open": "開盤",
+				"days_high": "最高",
+				"days_low": "最低",
+				"volume": "成交量"
+			}
+		}
+	},
+	"root": {
+		"toolbar": {
+			"text": {
+				"signup": "註冊",
+				"signin": "登入"
+			}
+		}
+	},
+	"search": {
+		"text": {
+			"no_data": "沒有符合的資料"
+		},
+		"common": {
+			"query": {
+				"any_word": "請輸入任意的關鍵字",
+				"search": "搜尋",
+				"person": "朋友",
+				"stock": "股票"
+			}
+		},
+		"person": {
+			"filter": {
+				"age": {
+					"title": "年紀",
+					"from": "從",
+					"to": "到"
+				},
+				"sex": {
+					"title": "性別",
+					"male": "男性",
+					"female": "女性",
+					"any": "任何"
+				},
+				"status": {
+					"title": "狀態",
+					"with_photo": "有照片"
+				}
+			},
+			"result": {
+				"title": "搜尋結果"
+			}
+		},
+		"stock": {
+			"filter": {
+				"country": {
+					"title": "國家",
+					"tw": "台股"
+				},
+				"market": {
+					"title": "市場",
+					"default": "全部市場",
+					"tw_twse": "上市",
+					"tw_gtsm": "上櫃"
+				},
+				"type": {
+					"title": "類別",
+					"default": "全部類別",
+					"tw_stock": "股票",
+					"tw_etf": "ETF",
+					"tw_tdr": "TDR"
+				},
+				"group": {
+					"1": "水泥工業",
+					"2": "食品工業",
+					"3": "塑膠工業",
+					"4": "紡織纖維",
+					"5": "電機機械",
+					"6": "電器電纜",
+					"8": "玻璃陶瓷",
+					"9": "造紙工業",
+					"10": "鋼鐵工業",
+					"11": "橡膠工業",
+					"12": "汽車工業",
+					"13": "電子工業",
+					"14": "建材營造業",
+					"15": "航運業",
+					"16": "觀光事業",
+					"17": "金融保險業",
+					"18": "貿易百貨業",
+					"19": "綜合",
+					"20": "其他業",
+					"21": "化學工業",
+					"22": "生技醫療業",
+					"23": "油電燃氣業",
+					"24": "半導體業",
+					"25": "電腦及週邊設備業",
+					"26": "光電業",
+					"27": "通信網路業",
+					"28": "電子零組件業",
+					"29": "電子通路業",
+					"30": "資訊服務業",
+					"31": "其他電子業",
+					"32": "文化創意業",
+					"title": "產業",
+					"default": "全部產業"
+				}
+			}
+		}
+	},
+	"setting": {
+		"navi": {
+			"profile": "個人資料",
+			"account": "帳號",
+			"password": "密碼"
+		},
+		"profile": {
+			"title": "個人資料",
+			"form": {
+				"photo": "相片",
+				"fullname": "全名",
+				"birthday": "生日",
+				"sex": "性別",
+				"website": "網站",
+				"biographic": "自我介紹",
+				"ok": "儲存變更"
+			},
+			"help": {
+				"S_OK": "OK",
+				"I_FULLNAME": "輸入你的真實姓名，讓你認識的人可以找到你。",
+				"I_BIRTHDAY": "生日資訊可以幫助網站提供更佳的搜尋服務。",
+				"I_WEBSITE": "你有個人網站或者部落格嗎？就在這裡輸入網址。",
+				"I_BIOGRAPHIC": "160個字以內介紹你自己。",
+				"E_BIOGRAPHIC_LENGTH": "最多不可以超過160個字"
+			},
+			"notice": {
+				"success": "更新個人資料成功"
+			},
+			"text": {
+				"change_photo": "更改相片",
+				"month": "月",
+				"male": "男性",
+				"female": "女性"
+			},
+			"preview_avatar_modal": {
+				"title": "調整相片的位置與大小",
+				"cancel": "取消",
+				"apply": "套用"
+			}
+		},
+		"account": {
+			"title": "帳號",
+			"form": {
+				"username": "使用者帳號",
+				"ok": "儲存變更"
+			},
+			"help": {
+				"S_OK": "OK",
+				"I_USERNAME": "其他使用者透過你的使用者帳號與你互動",
+				"E_USERNAME_REQUIRED": "使用者帳號是必須的，英數字元和底線",
+				"E_USERNAME_PATTERN": "含有不合法的字元",
+				"E_USERNAME_LENGTH": "最少6個字元，最多不超過20個字元",
+				"E_USERNAME_ALREADY_USE": "使用者帳號已經被使用"
+			},
+			"notice": {
+				"success": "更新帳號成功"
+			}
+		},
+		"password": {
+			"title": "密碼",
+			"form": {
+				"password": "目前的密碼",
+				"new_password": "新密碼",
+				"new_password_confirm": "確認新密碼",
+				"ok": "儲存變更"
+			},
+			"help": {
+				"S_OK": "OK",
+				"I_NEW_PASSWORD": "6個字元以上，只允許英數字元、些許特殊字元",
+				"E_NEW_PASSWORD_PATTERN": "含有不合法的字元",
+				"E_NEW_PASSWORD_LENGTH": "最少6個字元，最多不超過20個字元",
+				"E_MATCH": "密碼不一致"
+			},
+			"notice": {
+				"success": "更新密碼成功"
+			}
+		}
+	},
+	"stock": {
+		"text": {
+			"no_data": "目前沒有任何資料"
+		},
+		"btn_follow": {
+			"edit": "編輯資料",
+			"unfollow": "關注",
+			"follow": "正在關注"
+		},
+		"profile": {
+			"trade": "交易",
+			"realtime": "即時行情",
+			"previous_close": "昨收",
+			"open": "開盤",
+			"days_high": "最高",
+			"days_low": "最低",
+			"volume": "成交量"
+		},
+		"post": {
+			"title": "我的推文"
+		},
+		"follower": {
+			"title": "跟隨的人"
+		},
+		"technique": {
+			"title": "技術分析",
+			"tooltip": {
+				"open": "開盤：",
+				"high": "最高：",
+				"low": "最低：",
+				"close": "收盤：",
+				"volume": "成交量："
+			},
+			"text": {
+				"daily_line": "日線",
+				"weekly_line": "週線",
+				"monthly_line": "月線",
+				"3_month": "3個月",
+				"6_month": "6個月",
+				"1_year": "1年",
+				"2_year": "2年",
+				"3_year": "3年",
+				"5_year": "5年",
+				"6_year": "6年",
+				"10_year": "10年",
+				"15_year": "15年",
+				"20_year": "20年"
+			}
+		}
+	},
+	"timeline": {
+		"text": {
+			"eclipse": "⋯⋯",
+			"no_data": "目前沒有任何資料",
+			"tweet_has_been_deleted": "推文已被原作者刪除"
+		},
+		"category": {
+			"all": "全部",
+			"discuss": "討論",
+			"news": "新聞",
+			"announce": "公告"
+		},
+		"box": {
+			"title_hint": "請輸入標題",
+			"post": "推文",
+			"post_hint": "在想些什麼?",
+			"comment": "留言",
+			"comment_hint": "新增留言...",
+			"tooltip": {
+				"upload_photo": "上傳照片",
+				"title": "標題"
+			}
+		},
+		"action": {
+			"comment": "留言",
+			"related_comment": "相關留言",
+			"retweet": "轉推",
+			"favorite": "收藏",
+			"like": "喜歡",
+			"delete": "刪除",
+			"more": "更多"
+		},
+		"who": {
+			"from": "由",
+			"retweet": "轉推"
+		},
+		"unread_comments": {
+			"show_previous": "顯示先前的",
+			"comments": "則留言"
+		},
+		"retweet_modal": {
+			"title": "轉推給你的朋友",
+			"leave_tweet": "想說些什麼...",
+			"where_to_share": "分享到哪裡",
+			"my_profile_feed": "我的留言牆",
+			"my_profile_feed_help": "分享推文給我的朋友和我的追蹤者",
+			"ok": "轉推",
+			"cancel": "取消"
+		},
+		"delete_tweet": {
+			"title": "刪除",
+			"delete_post": "你確認要刪除推文嗎?",
+			"delete_comment": "你確認要刪除留言嗎?",
+			"cancel": "取消",
+			"delete": "刪除"
+		},
+		"upload_fail_modal": {
+			"title": "你的相片無法被上傳",
+			"desp": "相片的檔案必須小於 3 MB，並以 JPG、 PNG、GIF 儲存，一次最多上傳 3 張照片。",
+			"ok": "關閉"
+		}
+	},
+	"upload": {
+		"preview": {
+			"title": "調整相片的位置與大小",
+			"cancel": "取消",
+			"apply": "套用"
+		}
+	},
+	"webapi-errors": {
+		"1001": "使用者提供的資料不完整或不正確",
+		"1002": "電子郵件已經被使用",
+		"1003": "使用者帳號已經被使用",
+		"1004": "沒有這個電子郵件",
+		"1020": "電子郵件或密碼不正確，請重新輸入",
+		"1021": "帳號尚未啟動，請點擊啟動帳號電子郵件中的連結",
+		"1022": "登入錯誤次數已超過上限，請透過忘記密碼連結重新設定新密碼",
+		"1030": "註冊帳號失敗",
+		"1031": "寄送認證信失敗，請重新寄送認證信",
+		"1032": "使用者帳號已經啟動了，請直接登入帳號",
+		"1040": "認證帳號失敗",
+		"1041": "無效的啟動碼",
+		"1060": "密碼重設失敗",
+		"1061": "寄送重設密碼信失敗，請重新寄送",
+		"1070": "密碼變更失敗",
+		"1071": "密碼變更沒有通過安全性檢查，請回到忘記密碼，重新寄送確認信",
+		"1080": "目前的密碼不正確喔",
+		"1100": "更新個人照片失敗",
+		"1101": "更新個人資料失敗",
+		"1102": "更新帳號失敗",
+		"1103": "使用者帳號已經被使用"
+	},
+	"welcome": {
+		"signin": {
+			"title": "快速登入",
+			"email": "電子郵件",
+			"password": "密碼",
+			"remember_me": "記住我",
+			"forgot_password": "忘記密碼",
+			"ok": "登入"
+		},
+		"signup": {
+			"title": "初次來到 StockBucks?",
+			"fullname": "全名",
+			"email": "電子郵件",
+			"password": "密碼",
+			"ok": "免費註冊"
+		}
+	}
+}

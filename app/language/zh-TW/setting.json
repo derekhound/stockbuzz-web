@@ -1,0 +1,80 @@
+{
+	"setting": {
+		"navi": {
+			"profile": "個人資料",
+			"account": "帳號",
+			"password": "密碼"
+		},
+		"profile": {
+			"title": "個人資料",
+			"form": {
+				"photo": "相片",
+				"fullname": "全名",
+				"birthday": "生日",
+				"sex": "性別",
+				"website": "網站",
+				"biographic": "自我介紹",
+				"ok": "儲存變更"
+			},
+			"help": {
+				"S_OK": "OK",
+			  	"I_FULLNAME": "輸入你的真實姓名，讓你認識的人可以找到你。",
+				"I_BIRTHDAY": "生日資訊可以幫助網站提供更佳的搜尋服務。",
+				"I_WEBSITE": "你有個人網站或者部落格嗎？就在這裡輸入網址。",
+				"I_BIOGRAPHIC": "160個字以內介紹你自己。",
+				"E_BIOGRAPHIC_LENGTH": "最多不可以超過160個字"
+			},
+			"notice": {
+				"success": "更新個人資料成功"
+			},
+			"text": {
+				"change_photo": "更改相片",
+				"month": "月",
+				"male": "男性",
+				"female": "女性"
+			},
+			"preview_avatar_modal": {
+				"title": "調整相片的位置與大小",
+				"cancel": "取消",
+				"apply": "套用"
+			}
+		},
+		"account": {
+			"title": "帳號",
+			"form": {
+				"username": "使用者帳號",
+				"ok": "儲存變更"
+			},
+			"help": {
+				"S_OK": "OK",
+				"I_USERNAME": "其他使用者透過你的使用者帳號與你互動",
+				"E_USERNAME_REQUIRED": "使用者帳號是必須的，英數字元和底線",
+				"E_USERNAME_PATTERN": "含有不合法的字元",
+				"E_USERNAME_LENGTH": "最少6個字元，最多不超過20個字元",
+				"E_USERNAME_ALREADY_USE": "使用者帳號已經被使用"
+			},
+			"notice": {
+				"success": "更新帳號成功"
+			}
+		},
+		"password": {
+			"title": "密碼",
+			"form": {
+				"password": "目前的密碼",
+				"new_password": "新密碼",
+				"new_password_confirm": "確認新密碼",
+				"ok": "儲存變更"
+			},
+			"help": {
+				"S_OK": "OK",
+				"I_NEW_PASSWORD": "6個字元以上，只允許英數字元、些許特殊字元",
+				"E_NEW_PASSWORD_PATTERN": "含有不合法的字元",
+				"E_NEW_PASSWORD_LENGTH": "最少6個字元，最多不超過20個字元",
+				"E_MATCH": "密碼不一致"
+			},
+			"notice": {
+				"success": "更新密碼成功"
+			}
+		}
+	}
+}

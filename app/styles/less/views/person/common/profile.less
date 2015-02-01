@@ -1,0 +1,124 @@
+#person-profile {
+
+    .master {
+        // 15px padding top + 150px user_avatar + 15px padding bottom = 180px
+        // 180px - 48px (height of slave block) = 132px
+        min-height: 132px;
+        padding: 12px;
+        .clearfix();
+
+        .user_avatar{
+            position: absolute;
+            top: 15px;
+            left: 23px;     // 15px padding + 7.5px gutter = 22.5px
+            width: 120px;
+            padding: 5px;
+            border-radius: 4px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.5),0 1px 5px rgba(0, 0, 0, 0.55);
+
+            .avatar_wrapper {
+                margin-bottom: 5px;
+                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 0 1px rgba(255, 255, 255, 0.1);
+
+                .avatar {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 3px;
+                }
+            }
+
+            .btn-follow {
+                width: 110px;
+                padding: 3px 20px;
+            }
+        }
+
+        .user_content {
+            padding-left: 135px;
+
+            .name {
+                line-height: 24px;
+
+                .fullname {
+                    font-size: @font-size-large;
+                    vertical-align: bottom;
+                }
+                .username {
+                    font-size: @font-size-base;
+                    vertical-align: bottom;
+                }
+            }
+
+            .biographic {
+                margin-top: 5px;
+            }
+
+            .website {
+                margin-top: 5px;
+            }
+
+            ul {
+                margin-top: 5px;
+                li {
+                    float: left;
+                    div {
+                        margin-right: 18px;
+
+                        .name {
+                            margin-right: 3px;
+                            font-size: 12px;
+                            color: #999;
+                        }
+                        .percent {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .slave {
+        border-top: 1px solid #eee;
+        .clearfix();
+
+        .user_stat {
+            float: right;
+
+            li {
+                float: left;
+                display: inline;
+                min-width: 72px;
+                border-left: 1px solid #eee;
+
+                a {
+                    display: block;
+                    padding: 7px 24px;
+                    text-align: center;
+                    text-decoration: none;
+
+                    .num {
+                        font-weight: bold;
+                        color: #000;
+                    }
+                    .name {
+                        font-size: @font-size-small;
+                        color: #999;
+                        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+                    }
+                }
+            }
+        }
+
+        .user_action {
+            padding-left: 15px;     // 15px padding left + 5px
+            line-height: 46px;
+            vertical-align: middle;
+
+            .btn-follow {
+                width: 120px;
+                padding: 3px 20px;
+            }
+        }
+    }
+}

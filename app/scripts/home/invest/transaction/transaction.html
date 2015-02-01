@@ -1,0 +1,83 @@
+<div id="inv-transaction" class="widget" ng-controller="invTransactionCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title" translate="invest.transaction.title"></h4>
+	</div>
+
+	<div class="widget-bd">
+
+		<div class="qb-table-topbar">
+			<select class="input-sm" ng-model="data.symbol_id">
+				<option value="-1" translate="invest.transaction.symbol_option.hint"></option>
+				<option value="{{symbol.symbol_id}}" ng-selected="data.symbol_id == symbol.symbol_id" ng-repeat="symbol in symbols">{{symbol.code}} {{symbol.name}}</option>
+			</select>
+
+			<select class="input-sm" ng-model="data.state">
+				<option value="-1" translate="invest.transaction.state_option.hint"></option>
+				<option value="1"  translate="invest.transaction.state_option.running"></option>
+				<option value="0"  translate="invest.transaction.state_option.finish"></option>
+			</select>
+
+			<div class="pull-right">
+				<a ng-click="detect()" style="margin-right: 3px;" tooltip-placement="top" tooltip="{{'invest.text.monitor' | translate}}"><i class="fa fa-bullseye fa-lg"></i></a>
+				<a ng-click="add()" tooltip-placement="top" tooltip="{{'invest.text.add' | translate}}"><i class="fa fa-plus-circle fa-lg"></i></a>
+			</div>
+		</div>
+
+		<table class="table table-striped qb-table">
+			<thead>
+				<tr>
+					<th class="ce" translate="invest.transaction.column.date"></th>
+					<th class="ce" translate="invest.transaction.column.type"></th>
+					<th class="ce" translate="invest.transaction.column.code"></th>
+					<th class="ce" translate="invest.transaction.column.stock"></th>
+					<th class="ri" translate="invest.transaction.column.share"></th>
+					<th class="ri" translate="invest.transaction.column.price"></th>
+					<th class="ri" translate="invest.transaction.column.comm_fee"></th>
+					<th class="ri" translate="invest.transaction.column.tranx_fee"></th>
+					<th class="ri" translate="invest.transaction.column.total_price"></th>
+					<th class="ce" translate="invest.transaction.column.state"></th>
+					<th class="ce" translate="invest.transaction.column.action"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="record in records">
+					<td class="ce">{{record.tranx_date}}</td>
+					<td class="ce">{{record.type}}</td>
+					<td class="ce"><a ng-href="#/stock/{{record.symbol_id}}/portal/post">{{record.code}}</a></td>
+					<td class="ce"><a ng-href="#/stock/{{record.symbol_id}}/portal/post">{{record.name}}</a></td>
+					<td class="ri">{{record.share | number}}</td>
+					<td class="ri">{{record.price | number:2}}</td>
+					<td class="ri">{{record.comm_fee | number}}</td>
+					<td class="ri">{{record.tranx_fee | number}}</td>
+					<td class="ri">{{record.total | number}}</td>
+					<td class="ce"><a tooltip-placement="left" tooltip="{{'invest.text.switch_state' | translate}}" ng-click="toggleRunning(record)">{{getStateStr(record.running)}}</a></td>
+					<td class="ce">
+						<a ng-click="edit(record)" tooltip-placement="left" tooltip="{{'invest.text.edit' | translate}}"><i class="fa fa-pencil"></i></a>
+						<span>&nbsp;</span>
+						<a ng-click="delete(record)" tooltip-placement="left" tooltip="{{'invest.text.delete' | translate}}"><i class="fa fa-minus-circle"></i></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="qb-table-bottombar text-center">
+			<pagination
+				ng-model="pagingOptions.currentPage"
+				total-items="pagingOptions.totalServerItems"
+				items-per-page="pagingOptions.pageSize"
+				max-size="10"
+				direction-links="true"
+				previous-text="&lsaquo; {{'invest.text.previous_page' | translate}}"
+				next-text="{{'invest.text.next_page' | translate}} &rsaquo;"
+				boundary-links="false"
+				first-text="&laquo; {{'invest.text.first_page' | translate}}"
+				last-text="{{'invest.text.last_page' | translate}} &raquo;"
+				ng-change="pageChanged()"
+			>
+			</pagination>
+		</div>
+
+	</div>
+
+</div>

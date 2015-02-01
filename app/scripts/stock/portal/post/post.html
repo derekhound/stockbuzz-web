@@ -1,0 +1,48 @@
+<div class="widget" ng-controller="stoPostCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title" translate="stock.post.title"></h4>
+	</div>
+
+	<!-- post-box -->
+	<qb-post-box
+		current-user="currentUser"
+		on-submit-post="submitPost(title, text, photos)"
+		ng-if="feed.permission.post_box">
+	</qb-post-box>
+
+	<!-- feed -->
+	<div class="timeline" infinite-scroll="getFeedPosts()">
+
+		<ul class="tags tags-block">
+			<li ng-class="{'active': feed.category == 'all'}">
+				<a ng-click="selectCategory('all')" translate="timeline.category.all"></a>
+			</li>
+			<li ng-class="{'active': feed.category == 'discuss'}">
+				<a ng-click="selectCategory('discuss')" translate="timeline.category.discuss"></a>
+			</li>
+			<li ng-class="{'active': feed.category == 'news'}">
+				<a ng-click="selectCategory('news')" translate="timeline.category.news"></a>
+			</li>
+			<li ng-class="{'active': feed.category == 'announce'}">
+				<a ng-click="selectCategory('announce')" translate="timeline.category.announce"></a>
+			</li>
+		</ul>
+
+		<qb-posts
+			current-user="currentUser"
+			feed="feed"
+			on-submit-post="submitPost(title, text, photos)"
+			on-submit-comment="submitComment(text, rank_id)"
+			on-show-comment="showComment(rank_id)"
+			on-get-unread-comment="getUnreadComment(rank_id)"
+			on-delete-post="deletePost(tweet_id)"
+			on-delete-comment="deleteComment(tweet_id)"
+			on-toggle-like="toggleLike(tweet_id)"
+			on-toggle-retweet="toggleRetweet(tweet_id, text, method)"
+			on-toggle-favorite="toggleFavorite(tweet_id)"
+		>
+		</qb-posts>
+	</div>
+
+</div>

@@ -1,0 +1,44 @@
+
+.qb-table {
+
+    th {
+        font-weight: bold;
+    }
+
+    th,
+    td {
+        &.le {
+            text-align: left;
+        }
+        &.ce {
+            text-align: center;
+        }
+        &.ri {
+            text-align: right;
+        }
+    }
+
+	> tbody > tr > td {
+		&.buy-price-highlight {
+			color: #fff;
+			background-color: #d14836;
+		}
+
+		&.sell-price-highlight {
+			color: #fff;
+			background-color: #009933;
+		}
+	}
+}
+
+.qb-table-topbar {
+    padding: 12px;
+};
+
+.qb-table-bottombar {
+    padding: 12px;
+};
+
+.qb-pagination {
+    text-align: center;
+}

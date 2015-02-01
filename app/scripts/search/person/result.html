@@ -1,0 +1,34 @@
+<div id="search-person-result" class="widget">
+
+	<div class="widget-hd">
+		<h4 class="title" translate="search.person.result.title"></h4>
+	</div>
+
+	<ul class="user-list" infinite-scroll="getList()">
+		<li ng-repeat="item in list.items">
+
+			<!-- avatar -->
+			<a ng-href="#/person/{{item.username}}/post">
+				<img ng-src="{{item.avatarM}}" class="avatar avatarM">
+			</a>
+
+			<!-- content -->
+			<div class="content">
+
+				<div class="item-hd">
+					<a ng-href="#/person/{{item.username}}/post" class="fullname">{{item.fullname}}</a>&nbsp;
+					<a ng-href="#/person/{{item.username}}/post" class="username">@{{item.username}}</a>
+				</div>
+
+				<div class="item-bd">
+					<div class="content" ng-bind-html="item.biographic"></div>
+				</div>
+			</div>
+		</li>
+	</ul>
+
+	<!-- no data -->
+	<div class="widget-bd" ng-show="list.items.length == 0">
+		<p translate="search.text.no_data"></p>
+	</div>
+</div>

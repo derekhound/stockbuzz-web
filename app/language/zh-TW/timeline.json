@@ -1,0 +1,64 @@
+﻿{
+	"timeline": {
+		"text": {
+			"eclipse": "⋯⋯",
+			"no_data": "目前沒有任何資料",
+			"tweet_has_been_deleted": "推文已被原作者刪除"
+		},
+		"category": {
+			"all": "全部",
+			"discuss": "討論",
+			"news": "新聞",
+			"announce": "公告"
+		},
+		"box": {
+			"title_hint": "請輸入標題",
+			"post": "推文",
+			"post_hint": "在想些什麼?",
+			"comment": "留言",
+			"comment_hint": "新增留言...",
+			"tooltip": {
+				"upload_photo": "上傳照片",
+				"title": "標題"
+			}
+		},
+		"action": {
+			"comment": "留言",
+			"related_comment": "相關留言",
+			"retweet": "轉推",
+			"favorite": "收藏",
+			"like": "喜歡",
+			"delete": "刪除",
+			"more": "更多"
+		},
+		"who": {
+			"from": "由",
+			"retweet": "轉推"
+		},
+		"unread_comments": {
+			"show_previous": "顯示先前的",
+			"comments": "則留言"
+		},
+		"retweet_modal": {
+			"title": "轉推給你的朋友",
+			"leave_tweet": "想說些什麼...",
+			"where_to_share": "分享到哪裡",
+			"my_profile_feed": "我的留言牆",
+			"my_profile_feed_help": "分享推文給我的朋友和我的追蹤者",
+			"ok": "轉推",
+			"cancel": "取消"
+		},
+		"delete_tweet": {
+			"title": "刪除",
+			"delete_post": "你確認要刪除推文嗎?",
+			"delete_comment": "你確認要刪除留言嗎?",
+			"cancel": "取消",
+			"delete": "刪除"
+		},
+		"upload_fail_modal": {
+			"title": "你的相片無法被上傳",
+			"desp": "相片的檔案必須小於 3 MB，並以 JPG、 PNG、GIF 儲存，一次最多上傳 3 張照片。",
+			"ok": "關閉"
+		}
+	}
+}

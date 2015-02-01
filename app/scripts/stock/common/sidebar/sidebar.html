@@ -1,0 +1,70 @@
+<div id="sidebar" ng-controller="stoSidebarCtrl">
+
+	<!-- menu -->
+	<ul class="menu">
+		<!-- social -->
+		<li class="menu-header">
+			<span>社交面</span>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('stock.portal.post')}">
+			<a ng-href="#/stock/{{username}}/portal/post">
+				<span>我的推文</span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('stock.portal.follower')}">
+			<a ng-href="#/stock/{{username}}/portal/follower">
+				<span>追隨的人</span>
+			</a>
+		</li>
+
+		<!-- chart -->
+		<li class="menu-header">
+			<span>技術面</span>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('stock.technique')}">
+			<a ng-href="#/stock/{{username}}/technique">
+				<span>技術分析</span>
+			</a>
+		</li>
+
+		<!-- basic -->
+		<li class="menu-header">
+			<span>基本面</span>
+		</li>
+		<li class="menu-item">
+			<a ng-href="https://tw.stock.yahoo.com/d/s/company_{{code}}.html" target="_blank">
+				<span>公司資料</span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('home.portal.news')}">
+			<a ng-href="https://tw.stock.yahoo.com/d/s/earning_{{code}}.html" target="_blank">
+				<span>營收盈餘</span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('home.portal.favorite')}">
+			<a ng-href="https://tw.stock.yahoo.com/d/s/dividend_{{code}}.html" target="_blank">
+				<span>股利政策</span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('home.photo.album')}">
+			<a ng-href="https://tw.stock.yahoo.com/d/s/insider_{{code}}.html" target="_blank">
+				<span>申報轉讓</span>
+			</a>
+		</li>
+
+		<!-- trading -->
+		<li class="menu-header">
+			<span>籌碼面</span>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('home.invest.watch')}">
+			<a ng-href="https://tw.stock.yahoo.com/d/s/major_{{code}}.html" target="_blank">
+				<span>主力進出</span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('home.invest.now_profit')}">
+			<a ng-href="https://tw.stock.yahoo.com/d/s/credit_{{code}}.html" target="_blank">
+				<span>資券變化</span>
+			</a>
+		</li>
+	</ul>
+</div>

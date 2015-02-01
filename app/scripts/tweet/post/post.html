@@ -1,0 +1,20 @@
+<div class="widget" ng-controller="twePostCtrl">
+
+	<!-- feed -->
+	<div class="timeline">
+		<qb-posts
+			current-user="currentUser"
+			feed="feed"
+			on-submit-comment="submitComment(text, rank_id)"
+			on-show-comment="showComment(rank_id)"
+			on-get-unread-comment="getUnreadComment(rank_id)"
+			on-delete-post="deletePost(tweet_id)"
+			on-delete-comment="deleteComment(tweet_id)"
+			on-toggle-like="toggleLike(tweet_id)"
+			on-toggle-retweet="toggleRetweet(tweet_id, text, method)"
+			on-toggle-favorite="toggleFavorite(tweet_id)"
+		>
+		</qb-posts>
+	</div>
+
+</div>

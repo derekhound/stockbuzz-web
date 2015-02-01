@@ -1,0 +1,55 @@
+.retweet {
+    p {
+        margin: 0;
+    }
+}
+
+
+// Retweet
+// -------------------------
+
+.retweet {
+
+    > .retweet-box {
+        margin-bottom: 20px;
+    }
+
+    // almost the same as post in timeline
+    > .post {
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+
+        > span > .avatar {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .post-content {
+            overflow: hidden;
+        }
+    }
+
+    // almost the same as quote in timeline
+    > .quote {
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+
+        .quote_src {
+            .avatar {
+                float: left;
+                margin-right: 10px;
+            }
+        }
+
+        .quote-content {
+            overflow: hidden;
+
+            .quote-tt {
+                font-weight: bold;
+                //text-decoration: underline;
+            }
+        }
+    }
+}

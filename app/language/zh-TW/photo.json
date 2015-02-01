@@ -1,0 +1,27 @@
+{
+	"photo": {
+		"text": {
+			"album": "相簿",
+			"latest_photos": "最近的相片",
+			"previous_page": "回上頁",
+			"close": "關閉",
+			"my_photos": "我的照片",
+			"someone_photos": "{{fullname}} 的照片"
+		},
+		"default_album": {
+			"profile_album": "大頭貼照片",
+			"wall_album": "動態消息照片"
+		},
+		"album": {
+			"title": "我的照片"
+		},
+		"album_photos": {
+			"title": "我的照片"
+		},
+		"photo_modal": {
+			"album": "相簿:",
+			"added_by": "建立者:",
+			"delete": "刪除照片"
+		}
+	}
+}

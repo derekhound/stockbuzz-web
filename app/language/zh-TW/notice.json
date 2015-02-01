@@ -1,0 +1,9 @@
+{
+	"notice": {
+		"backend": {
+			"unauthorized_error": "你必須要登入後取得操作權限",
+			"internal_server_error": "伺服器連線發生問題",
+			"unknow_error": "伺服器連線發生不明問題"
+		}
+	}
+}

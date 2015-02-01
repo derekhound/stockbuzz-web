@@ -1,0 +1,127 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="cancel()">&times;</button>
+	<div class="modal-title" ng-bind="getTitleStr()"></div>
+</div>
+<div class="modal-body">
+	<form name="form" class="form-horizontal" novalidate>
+
+		<!-- tranx_date -->
+		<div class="form-group">
+			<label class="col-xs-6 control-label" translate="invest.transaction.column.date"></label>
+			<div class="col-xs-8">
+				<p class="input-group">
+					<input type="text" name= "tranx_date" class="form-control"
+						ng-model="data.tranx_date"
+						max-date="getToday()"
+						show-weeks="false"
+						datepicker-popup="yyyy-MM-dd"
+						show-button-bar="false"
+						current-text="Today"
+						clear-text="Clear"
+						close-text="Close"
+						ng-required="true"
+						is-open="timepicker.opened"
+					/>
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-default" ng-click="openTimepicker($event)"><i class="fa fa-calendar"></i></button>
+					</span>
+				</p>
+			</div>
+		</div>
+
+		<!-- type -->
+		<div class="form-group">
+			<label class="col-xs-6 control-label" translate="invest.transaction.column.type"></label>
+			<div class="col-xs-8">
+				<select class="form-control" ng-model="data.type_id">
+					<option value="0" translate="invest.transaction.edit_tranx_modal.buy_spot_share"></option>
+					<option value="1" translate="invest.transaction.edit_tranx_modal.sell_spot_share"></option>
+					<option value="2" translate="invest.transaction.edit_tranx_modal.stock_dividend"></option>
+					<option value="3" translate="invest.transaction.edit_tranx_modal.cash_dividend"></option>
+				</select>
+			</div>
+		</div>
+
+		<!-- symbol_id -->
+		<div class="form-group">
+			<label class="col-xs-6 control-label" translate="invest.transaction.column.stock"></label>
+			<div class="col-xs-8">
+				<input type="text" name="symbol_id" class="form-control"
+					ng-model="data.symbol_id" ng-disabled="mode == 'edit'"
+					typeahead="s.username + ' ' + s.fullname for s in searchSymbol($viewValue)" typeahead-wait-ms="200"
+				>
+			</div>
+		</div>
+
+		<!-- share -->
+		<div class="form-group" ng-show="show.share">
+			<label class="col-xs-6 control-label" translate="invest.transaction.column.share"></label>
+			<div class="col-xs-8">
+				<input type="text" name="share" class="form-control" ng-model="data.share">
+			</div>
+			<div class="col-xs-10">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default" ng-click="addShare(1)">+1</button>
+					<button type="button" class="btn btn-default" ng-click="addShare(3)">+3</button>
+					<button type="button" class="btn btn-default" ng-click="addShare(5)">+5</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- price -->
+		<div class="form-group" ng-show="show.price">
+			<label class="col-xs-6 control-label" translate="invest.transaction.column.price"></label>
+			<div class="col-xs-8">
+				<input type="text" name="price" class="form-control" ng-model="data.price">
+			</div>
+			<div class="col-xs-10">
+				<button type="button" class="btn btn-default" translate="invest.transaction.edit_tranx_modal.current_price" ng-click="currentPrice(data.symbol_id)"></button>
+			</div>
+		</div>
+
+		<!-- comm_fee -->
+		<div class="form-group" ng-show="show.comm_fee">
+			<label class="col-xs-6 control-label" translate="invest.transaction.column.comm_fee"></label>
+			<div class="col-xs-8">
+				<input type="text" name="comm_fee" class="form-control" ng-model="data.comm_fee">
+			</div>
+			<div class="col-xs-10">
+				<button type="button" class="btn btn-default" translate="invest.transaction.edit_tranx_modal.auto_calculate" ng-click="autoCalculate()"></button>
+			</div>
+		</div>
+
+		<!-- tranx_fee -->
+		<div class="form-group" ng-show="show.tranx_fee">
+			<label class="col-xs-6 control-label" translate="invest.transaction.column.tranx_fee"></label>
+			<div class="col-xs-8">
+				<input type="text" name="tranx_fee" class="form-control" ng-model="data.tranx_fee">
+			</div>
+		</div>
+
+		<!-- total -->
+		<div class="form-group" ng-show="show.total">
+			<label class="col-xs-6 control-label" translate="invest.transaction.column.total_price"></label>
+			<div class="col-xs-8">
+				<input type="text" name="total" class="form-control" ng-model="data.total">
+			</div>
+		</div>
+
+		<!-- state -->
+		<div class="form-group">
+			<label class="col-xs-6 control-label" translate="invest.transaction.column.state"></label>
+			<div class="col-xs-8">
+				<label class="checkbox-inline">
+					<input type="radio" value="1" ng-model="data.running"> {{'invest.text.running' | translate}}
+				</label>
+				<label class="checkbox-inline">
+					<input type="radio" value="0" ng-model="data.running"> {{'invest.text.finish' | translate}}
+				</label>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-default" translate="invest.transaction.edit_tranx_modal.cancel" ng-click="cancel()"></button>
+	<button class="btn btn-primary" translate="invest.transaction.edit_tranx_modal.confirm" ng-click="ok()"></button>
+</div>

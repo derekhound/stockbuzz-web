@@ -1,0 +1,10 @@
+{
+	"root": {
+		"toolbar": {
+			"text": {
+				"signup": "註冊",
+				"signin": "登入"
+			}
+		}
+	}
+}

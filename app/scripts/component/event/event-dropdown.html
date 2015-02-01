@@ -1,0 +1,16 @@
+<li class="dropdown">
+	<a href="#" class="dropdown-toggle">
+		<i class="fa fa-bell fa-lg"></i>
+	</a>
+	<ul class="dropdown-menu">
+		<li ng-repeat="event in event_list.events">
+			<a class="toolbar-event-item" ng-href="">
+				<img ng-src="images/avatar/0/avatar_S.jpg" class="avatar avatarS">
+
+				<div class="content">
+					{{event.content}}
+				</div>
+			</a>
+		</li>
+	</ul>
+</li>

@@ -1,0 +1,30 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="cancel()">&times;</button>
+	<div class="modal-title" translate="invest.watch.reorder_group_modal.title"></div>
+</div>
+
+<div class="modal-body">
+	<form name="form" class="form-horizontal" novalidate>
+		<!-- group_name -->
+		<div class="form-group">
+			<div class="col-xs-16">
+				<select class="form-control" size="10" ng-model="data.active_group_id">
+					<option value="{{group.group_id}}" ng-selected="data.active_group_id == group.group_id" ng-repeat="group in groups">{{group.name}}</option>
+				</select>
+			</div>
+			<div class="col-xs-8">
+				<div style="margin-bottom: 9px;">
+					<button class="btn btn-default" translate="invest.watch.reorder_group_modal.up" ng-click="up()"></button>
+				</div>
+				<div>
+					<button class="btn btn-default" translate="invest.watch.reorder_group_modal.down" ng-click="down()"></button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-default" translate="invest.watch.reorder_group_modal.cancel" ng-click="cancel()"></button>
+	<button class="btn btn-primary" translate="invest.watch.reorder_group_modal.confirm" ng-click="ok()"></button>
+</div>

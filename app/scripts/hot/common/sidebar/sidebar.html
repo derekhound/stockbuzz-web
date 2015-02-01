@@ -1,0 +1,29 @@
+<div id="sidebar" ng-controller="hotSidebarCtrl">
+
+	<!-- menu -->
+	<ul class="menu">
+		<li class="menu-header">
+			<span translate="hot.sidebar.index.header"></span>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('hot.hot_discuss')}">
+			<a href="#/hot/hot_discuss">
+				<span translate="hot.sidebar.index.hot_discuss"></span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('hot.hot_news')}">
+			<a href="#/hot/hot_news">
+				<span translate="hot.sidebar.index.hot_news"></span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('hot.hot_announce')}">
+			<a href="#/hot/hot_announce">
+				<span translate="hot.sidebar.index.hot_announce"></span>
+			</a>
+		</li>
+		<li class="menu-item" ng-class="{'active': isActive('hot.new_post')}">
+			<a href="#/hot/new_post">
+				<span translate="hot.sidebar.index.new_post"></span>
+			</a>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,60 @@
+<div class="comments" ng-show="post.show_comment">
+
+	<!-- unread comments -->
+	<div class="unread_comments" ng-show="showUnreadComment()">
+		<div class="body" ng-click="getUnreadComment()">
+			<span>{{'timeline.unread_comments.show_previous' | translate}} {{getUnreadCount()}} {{'timeline.unread_comments.comments' | translate}}</span>
+		</div>
+	</div>
+
+	<!-- comment -->
+	<div class="tweet comment" tweet-id="{{comment.tweet_id}}" ng-repeat="comment in post.comments">
+
+		<!-- tweet-menu -->
+		<div class="tweet-menu" ng-click="deleteComment(comment.tweet_id)" ng-show="comment.user_id == currentUser.user_id">
+			<a><i class="fa fa-times"></i></a>
+		</div>
+
+		<!-- tweet-content -->
+		<div class="tweet-content">
+			<a ng-href="#/home/user/{{comment.username}}" class="avatar_container">
+				<img ng-src="{{comment.avatarS}}" class="avatar avatarS">
+			</a>
+
+			<div class="tweet-hd">
+				<a ng-href="#/home/user/{{comment.username}}" class="fullname">{{comment.fullname}}</a>&nbsp;
+				<a ng-href="#/home/user/{{comment.username}}" class="username">@{{comment.username}}</a>
+			</div>
+
+			<div class="tweet-bd">
+				<div class="content">
+					<span ng-bind-html="getContent(comment)"></span>
+					<span ng-show="!comment.is_expand">{{'timeline.text.eclipse' | translate}} <a translate="timeline.action.more" ng-click="readmore(comment)"></a></span>
+				</div>
+			</div>
+
+			<div class="tweet-ft">
+				<span class="info">
+					<a class="moment" title="{{comment.create_utime | date:'yyyy-MM-dd HH:mm:ss'}}">{{comment.moment}}</a>
+				</span>
+				<ul class="action">
+					<li ng-class="{'active': comment.is_like}">
+						<a ng-click="toggleLike(comment.tweet_id)">
+							<span class="name" translate="timeline.action.like"></span>
+							<i class="fa fa-heart"></i>
+							<span class="count">{{comment.like_count}}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- comment-box -->
+	<qb-comment-box
+		current-user="currentUser"
+		rank-id="{{post.rank_id}}"
+		on-submit-comment="submitComment(text, rank_id)">
+	</qb-comment-box>
+</div>

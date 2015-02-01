@@ -1,0 +1,26 @@
+<div class="widget" ng-controller="setNaviCtrl">
+	<div>
+		<ul class="navi">
+			<li class="navi-item" ng-class="{'active': isActive('setting.profile')}">
+				<a href="#/setting/profile">
+					<span class="name">{{'setting.navi.profile' | translate}}</span>
+					<span class="icon"><i class="fa fa-chevron-right"></i></span>
+				</a>
+			</li>
+
+			<li class="navi-item" ng-class="{'active': isActive('setting.account')}">
+				<a href="#/setting/account">
+					<span class="name">{{'setting.navi.account' | translate}}</span>
+					<span class="icon"><i class="fa fa-chevron-right"></i></span>
+				</a>
+			</li>
+
+			<li class="navi-item" ng-class="{'active': isActive('setting.password')}">
+				<a href="#/setting/password">
+					<span class="name">{{'setting.navi.password' | translate}}</span>
+					<span class="icon"><i class="fa fa-chevron-right"></i></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

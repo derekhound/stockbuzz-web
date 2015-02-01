@@ -1,0 +1,49 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="cancel()">&times;</button>
+	<div class="modal-title" ng-bind="getTitleStr()"></div>
+</div>
+<div class="modal-body">
+	<form name="form" class="form-horizontal" novalidate>
+		<!-- symbol_id -->
+		<div class="form-group">
+			<label class="col-xs-6 control-label" translate="invest.watch.column.stock"></label>
+			<div class="col-xs-8">
+				<input type="text" name="symbol_id" class="form-control"
+					ng-model="data.symbol_id" ng-disabled="mode == 'edit'"
+					typeahead="s.username + ' ' + s.fullname for s in searchSymbol($viewValue)" typeahead-wait-ms="200"
+				>
+			</div>
+		</div>
+
+		<!-- buy_price -->
+		<div class="form-group">
+			<label class="col-xs-6 control-label" translate="invest.watch.column.buy_price"></label>
+			<div class="col-xs-8">
+				<input type="text" name="price" class="form-control" ng-model="data.buy_price">
+			</div>
+		</div>
+
+		<!-- sell_price -->
+		<div class="form-group">
+			<label class="col-xs-6 control-label" translate="invest.watch.column.sell_price"></label>
+			<div class="col-xs-8">
+				<input type="text" name="price" class="form-control" ng-model="data.sell_price">
+			</div>
+		</div>
+
+		<!-- groups -->
+		<div class="form-group">
+			<label class="col-xs-6 control-label" translate="invest.watch.edit_watch_modal.group"></label>
+			<div class="col-xs-8">
+				<label class="checkbox" ng-repeat="group in groups">
+					<input type="checkbox" checklist-model="data.group_ids" checklist-value="group.group_id"> {{group.name}}
+				</label>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-default" translate="invest.watch.edit_watch_modal.cancel" ng-click="cancel()"></button>
+	<button class="btn btn-primary" translate="invest.watch.edit_watch_modal.confirm" ng-click="ok()"></button>
+</div>

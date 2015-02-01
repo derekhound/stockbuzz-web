@@ -1,0 +1,33 @@
+a {
+    cursor: pointer;
+}
+
+ol,
+ul {
+	list-style:none;
+	padding: 0;
+	margin: 0;
+}
+
+.fullname {
+    font-weight: bold;
+	color: #2b587a;
+    vertical-align: bottom;
+
+	&.black {
+		color: #292F33;
+	}
+}
+
+.username {
+    font-size: 12px;
+    color: #999;
+    vertical-align: bottom;
+
+    // usernmae could be child of anchor,
+    // so we should overwrite color property
+    &:hover {
+        color: #999;
+        text-decoration: none;
+    }
+}

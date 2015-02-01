@@ -1,0 +1,86 @@
+<nav class="navbar navbar-inverse navbar-static-top" ng-controller="homAuthToolbarCtrl">
+	<div class="container">
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<a type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a id="logo" class="navbar-brand" href="#/home/portal/news">StockBuzz</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-responsive-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+
+			<!-- left menu -->
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="#/home/portal/news" translate="home.toolbar.text.index"></a>
+				</li>
+				<li>
+					<a href="#/hot/hot_discuss" translate="home.toolbar.text.hot"></a>
+				</li>
+				<li>
+					<a href="#/quote/category" translate="home.toolbar.text.quote"></a>
+				</li>
+				<li>
+					<a href="#/search/person" translate="home.toolbar.text.search"></a>
+				</li>
+			</ul>
+
+			<!-- right menu -->
+			<ul class="nav navbar-nav navbar-right">
+				<li id="nav-profile">
+					<a href="#/person/{{currentUser.username}}/post">
+						<img ng-src="{{currentUser.avatarS}}" class="avatar">
+						<span class="name">{{getShortname()}}</span>
+					</a>
+				</li>
+				<!-- message -->
+				<li class="dropdown" ng-if="false">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-envelope fa-lg"></i>
+					</a>
+				</li>
+				<!-- event -->
+				<qb-events events="event_list.events"></qb-events>
+
+				<!-- setting -->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-cog fa-lg"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="#/setting/profile" translate="home.toolbar.setting.setting"></a>
+						</li>
+						<li>
+							<a translate="home.toolbar.setting.logout" ng-click="logout()"></a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<!-- search-bar -->
+			<form class="navbar-form navbar-right">
+				<div class="form-group">
+					<div id="search-bar-addon">
+						<input type="text" class="form-control"
+							placeholder="{{'home.toolbar.search_bar.hint' | translate}}"
+							ng-model="query"
+							typeahead="user as user.fullname for user in getList($viewValue)"
+							typeahead-on-select="onSelectMatch($item, $model, $label)"
+							typeahead-template-url="scripts/home/common/toolbar/typeahead-match.html"
+							typeahead-wait-ms="200"
+						>
+						<i class="fa fa-search"></i>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</nav>

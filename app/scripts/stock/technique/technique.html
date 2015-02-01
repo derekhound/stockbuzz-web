@@ -1,0 +1,47 @@
+<div id="stock-technique" class="widget" ng-controller="stoTechniqueCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title" translate="stock.technique.title"></h4>
+	</div>
+
+	<div class="widget-bd">
+
+		<!-- topbar -->
+		<div class="topbar">
+			<div class="btn-group">
+				<button type="button" class="btn btn-default" ng-class="{'active': isLineActive('daily')}"   ng-click="onClickDailyLine()"   translate="stock.technique.text.daily_line"></button>
+				<button type="button" class="btn btn-default" ng-class="{'active': isLineActive('weekly')}"  ng-click="onClickWeeklyLine()"  translate="stock.technique.text.weekly_line"></button>
+				<button type="button" class="btn btn-default" ng-class="{'active': isLineActive('monthly')}" ng-click="onClickMonthlyLine()" translate="stock.technique.text.monthly_line"></button>
+			</div>
+		</div>
+
+		<!-- chart -->
+		<div id="technique-chart" style="height: 580px;"></div>
+
+		<!-- bottombar -->
+		<div class="bottombar">
+			<!-- daily -->
+			<div class="btn-group" ng-show="line == 'daily'">
+				<button type="button" class="btn btn-default" ng-class="{'active': isRangeActive(0, 3)}" ng-click="onClickRange(0, 3)" translate="stock.technique.text.3_month"></button>
+				<button type="button" class="btn btn-default" ng-class="{'active': isRangeActive(0, 6)}" ng-click="onClickRange(0, 6)" translate="stock.technique.text.6_month"></button>
+				<button type="button" class="btn btn-default" ng-class="{'active': isRangeActive(1, 0)}" ng-click="onClickRange(1, 0)" translate="stock.technique.text.1_year"></button>
+				<button type="button" class="btn btn-default" ng-class="{'active': isRangeActive(2, 0)}" ng-click="onClickRange(2, 0)" translate="stock.technique.text.2_year"></button>
+			</div>
+			<!-- weekly -->
+			<div class="btn-group" ng-show="line == 'weekly'">
+				<button type="button" class="btn btn-default" ng-class="{'active': isRangeActive(1, 0)}" ng-click="onClickRange(1, 0)" translate="stock.technique.text.1_year"></button>
+				<button type="button" class="btn btn-default" ng-class="{'active': isRangeActive(2, 0)}" ng-click="onClickRange(2, 0)" translate="stock.technique.text.2_year"></button>
+				<button type="button" class="btn btn-default" ng-class="{'active': isRangeActive(3, 0)}" ng-click="onClickRange(3, 0)" translate="stock.technique.text.3_year"></button>
+				<button type="button" class="btn btn-default" ng-class="{'active': isRangeActive(6, 0)}" ng-click="onClickRange(6, 0)" translate="stock.technique.text.6_year"></button>
+			</div>
+			<!-- monthly -->
+			<div class="btn-group" ng-show="line == 'monthly'">
+				<button type="button" class="btn btn-default" ng-class="{'active': isRangeActive( 5, 0)}" ng-click="onClickRange( 5, 0)" translate="stock.technique.text.5_year"></button>
+				<button type="button" class="btn btn-default" ng-class="{'active': isRangeActive(10, 0)}" ng-click="onClickRange(10, 0)" translate="stock.technique.text.10_year"></button>
+				<button type="button" class="btn btn-default" ng-class="{'active': isRangeActive(15, 0)}" ng-click="onClickRange(15, 0)" translate="stock.technique.text.15_year"></button>
+				<button type="button" class="btn btn-default" ng-class="{'active': isRangeActive(20, 0)}" ng-click="onClickRange(20, 0)" translate="stock.technique.text.20_year"></button>
+			</div>
+		</div>
+	</div>
+
+</div>

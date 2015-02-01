@@ -1,0 +1,70 @@
+<div id="stock-profile" class="widget" ng-controller="stoProfileCtrl">
+	<div class="widget-bd">
+
+		<div class="profile-hd">
+			<div class="name">
+				<span class="fullname black">{{user.fullname}}</span>&nbsp;
+				<span class="username">@{{user.username}}</span>
+			</div>
+
+			<ul class="menu">
+				<li class="menu-item">
+					<button class="btn btn-follow btn-sm" ng-class="[getFollowBtnStyle()]" ng-click="toggleFollow()">{{getFollowBtnString()}}</button>
+				</li>
+				<li class="menu-item">
+					<button class="btn btn-default btn-sm" ng-click="trade()" translate="stock.profile.trade"></button>
+				</li>
+			</ul>
+		</div>
+
+		<div class="profile-bd">
+			<div class="current">
+				<span class="price" ng-class="upDown(quote.change)">{{quote.last_trade_price | number:2}}</span>
+				<span class="change" ng-class="upDown(quote.change)">{{positiveSign(quote.change)}}{{quote.change | number:2}}</span>
+				<span class="percent" ng-class="upDown(quote.change)">({{positiveSign(quote.change)}}{{quote.percent_change * 100 | number:2}}%)</span>
+			</div>
+			<div class="time">
+				<div>{{quote.last_trade_utime | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+				<div translate="stock.profile.realtime"></div>
+			</div>
+		</div>
+
+		<div class="quote">
+			<table class="table1">
+				<tbody>
+					<tr>
+						<th translate="stock.profile.previous_close"></th>
+						<td>{{quote.previous_close | number:2}}</td>
+					</tr>
+					<tr>
+						<th translate="stock.profile.open"></th>
+						<td>{{quote.open | number:2}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="table2">
+				<tbody>
+					<tr>
+						<th translate="stock.profile.days_high"></th>
+						<td>{{quote.days_high | number:2}}</td>
+					</tr>
+					<tr>
+						<th translate="stock.profile.days_low"></th>
+						<td>{{quote.days_low | number:2}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="table3">
+				<tbody>
+					<tr>
+						<th translate="stock.profile.volume"></th>
+						<td>{{quote.volume | number}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</div>

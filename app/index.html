@@ -1,0 +1,212 @@
+<!doctype html>
+<html ng-app="app">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="KeyWords" content="stock,buzz,股票,行情,投資,股巴特">
+	<meta name="description" content="StockBuzz是一個投資者的社群網站，可以發掘其他投資者說了些什麼，快速掌握你所關注的股票新聞，以及透過交易紀錄檢視自己的投資狀況。">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>StockBuzz</title>
+
+	<!-- build:css({.tmp,app}) styles/style.css -->
+	<link rel="stylesheet" href="styles/cssreset.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+	<link rel="stylesheet" href="styles/font-awesome/css/font-awesome.css">
+</head>
+<body>
+	<!--[if lt IE 7]>
+	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<script src="bower_components/es5-shim/es5-shim.js"></script>
+	<script src="bower_components/json3/lib/json3.min.js"></script>
+	<![endif]-->
+
+	<!-- Add your site or application content here -->
+	<div ui-view="viewA"></div>
+	<div ui-view="viewB" id="page_container"></div>
+
+	<!-- build:js({.tmp,app}) scripts/jquery.js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js({.tmp,app}) scripts/angularjs.js -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js({.tmp,app}) scripts/module.js -->
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+	<script src="bower_components/angular-translate/angular-translate.js"></script>
+	<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+	<script src="bower_components/angular-translate-handler-log/angular-translate-handler-log.js"></script>
+
+	<script src="bower_components/angular-easyfb/angular-easyfb.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js({.tmp,app}) scripts/vendors.js -->
+	<script src="vendors/Highstock-2.0.1/js/highstock.src.js"></script>
+	<script src="vendors/Highstock-Plugins/trackball-master/trackball.js"></script>
+
+	<!--
+	<script src="vendors/Highstock-1.3.8/modules/exporting.js"></script>
+	<script src="vendors/Highstock-1.3.8/plugin/trackball/trackball.js"></script>
+	-->
+
+	<script src="vendors/autofill-event/src/autofill-event.js"></script>
+	<script src="vendors/checklist-model/checklist-model.js"></script>
+	<script src="vendors/angular-elastic/elastic.js"></script>
+	<script src="vendors/nginfinitescroll/build/ng-infinite-scroll.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js({.tmp,app}) scripts/application.js -->
+	<script src="scripts/app.js"></script>
+
+	<script src="scripts/component/component.js"></script>
+
+	<script src="scripts/component/configure/configure.js"></script>
+	<script src="scripts/component/configure/http-post-fix.js"></script>
+	<script src="scripts/component/configure/website-url.js"></script>
+
+	<script src="scripts/component/filter/filter.js"></script>
+	<script src="scripts/component/filter/moment.js"></script>
+
+	<script src="scripts/component/directive/directive.js"></script>
+	<script src="scripts/component/directive/invalid-model-value-fix.js"></script>
+	<script src="scripts/component/directive/password-match.js"></script>
+	<script src="scripts/component/directive/unique-value.js"></script>
+
+	<script src="scripts/component/service/service.js"></script>
+	<script src="scripts/component/service/base64.js"></script>
+	<script src="scripts/component/service/notice.js"></script>
+	<script src="scripts/component/service/tweet.js"></script>
+	<script src="scripts/component/service/photo.js"></script>
+	<script src="scripts/component/service/uuid.js"></script>
+
+	<script src="scripts/component/resource/resource.js"></script>
+	<script src="scripts/component/resource/user.js"></script>
+	<script src="scripts/component/resource/timeline.js"></script>
+	<script src="scripts/component/resource/invest.js"></script>
+	<script src="scripts/component/resource/stock.js"></script>
+	<script src="scripts/component/resource/social.js"></script>
+	<script src="scripts/component/resource/photo.js"></script>
+	<script src="scripts/component/resource/event.js"></script>
+
+	<script src="scripts/component/security/security.js"></script>
+	<script src="scripts/component/security/interceptor.js"></script>
+	<script src="scripts/component/security/retry-queue.js"></script>
+	<script src="scripts/component/security/login-modal-ctrl.js"></script>
+
+	<script src="scripts/component/timeline/timeline.js"></script>
+	<script src="scripts/component/timeline/timeline-service.js"></script>
+	<script src="scripts/component/timeline/posts-directive.js"></script>
+	<script src="scripts/component/timeline/post-box-directive.js"></script>
+	<script src="scripts/component/timeline/comments-directive.js"></script>
+	<script src="scripts/component/timeline/comment-box-directive.js"></script>
+	<script src="scripts/component/timeline/retweet-modal-ctrl.js"></script>
+	<script src="scripts/component/timeline/delete-tweet-modal-ctrl.js"></script>
+	<script src="scripts/component/timeline/upload-fail-modal-ctrl.js"></script>
+	<script src="scripts/component/timeline/photo-wall-directive.js"></script>
+
+	<script src="scripts/component/event/event.js"></script>
+	<script src="scripts/component/event/event-dropdown-directive.js"></script>
+
+	<script src="scripts/component/upload/upload.js"></script>
+	<script src="scripts/component/upload/lvl-xhr-post.js"></script>
+
+	<script src="scripts/root/root.js"></script>
+	<script src="scripts/root/index/index-ctrl.js"></script>
+
+	<script src="scripts/auth/auth.js"></script>
+	<script src="scripts/auth/common/notice/notice-ctrl.js"></script>
+	<script src="scripts/auth/signin/signin-ctrl.js"></script>
+	<script src="scripts/auth/signup/signup-ctrl.js"></script>
+	<script src="scripts/auth/activate/activate-ctrl.js"></script>
+	<script src="scripts/auth/forgot_password/forgot-password-ctrl.js"></script>
+	<script src="scripts/auth/reset_password/reset-password-ctrl.js"></script>
+	<script src="scripts/auth/send_activation_email/send-activation-email-ctrl.js"></script>
+
+	<script src="scripts/home/home.js"></script>
+	<script src="scripts/home/common/toolbar/toolbar-ctrl.js"></script>
+	<script src="scripts/home/common/toolbar/auth-toolbar-ctrl.js"></script>
+	<script src="scripts/home/common/notice/notice-ctrl.js"></script>
+	<script src="scripts/home/common/sidebar/sidebar-ctrl.js"></script>
+
+	<script src="scripts/home/portal/portal.js"></script>
+	<script src="scripts/home/portal/common/hot_news/hot-news-ctrl.js"></script>
+	<script src="scripts/home/portal/news/news-ctrl.js"></script>
+	<script src="scripts/home/portal/favorite/favorite-ctrl.js"></script>
+
+	<script src="scripts/home/photo/photo.js"></script>
+	<script src="scripts/home/photo/album/album-ctrl.js"></script>
+	<script src="scripts/home/photo/album_photos/album-photos-ctrl.js"></script>
+	<script src="scripts/home/photo/photo_modal/photo-modal-ctrl.js"></script>
+
+	<script src="scripts/home/invest/invest.js"></script>
+	<script src="scripts/home/invest/watch/watch-ctrl.js"></script>
+	<script src="scripts/home/invest/watch/edit-group-modal-ctrl.js"></script>
+	<script src="scripts/home/invest/watch/delete-group-modal-ctrl.js"></script>
+	<script src="scripts/home/invest/watch/reorder-group-modal-ctrl.js"></script>
+	<script src="scripts/home/invest/watch/edit-watch-modal-ctrl.js"></script>
+	<script src="scripts/home/invest/watch/delete-watch-modal-ctrl.js"></script>
+	<script src="scripts/home/invest/transaction/transaction-ctrl.js"></script>
+	<script src="scripts/home/invest/transaction/edit-tranx-modal-ctrl.js"></script>
+	<script src="scripts/home/invest/transaction/delete-tranx-modal-ctrl.js"></script>
+	<script src="scripts/home/invest/now_profit/now-profit-ctrl.js"></script>
+	<script src="scripts/home/invest/past_profit/past-profit-ctrl.js"></script>
+
+	<script src="scripts/hot/hot.js"></script>
+	<script src="scripts/hot/common/sidebar/sidebar-ctrl.js"></script>
+	<script src="scripts/hot/hot_discuss/hot-discuss-ctrl.js"></script>
+	<script src="scripts/hot/hot_news/hot-news-ctrl.js"></script>
+	<script src="scripts/hot/hot_announce/hot-announce-ctrl.js"></script>
+	<script src="scripts/hot/new_post/new-post-ctrl.js"></script>
+
+	<script src="scripts/quote/quote.js"></script>
+	<script src="scripts/quote/category/category-ctrl.js"></script>
+
+	<script src="scripts/search/search.js"></script>
+	<script src="scripts/search/person/person-ctrl.js"></script>
+	<script src="scripts/search/stock/stock-ctrl.js"></script>
+
+	<script src="scripts/setting/setting.js"></script>
+	<script src="scripts/setting/common/navi-ctrl.js"></script>
+	<script src="scripts/setting/profile/profile-ctrl.js"></script>
+	<script src="scripts/setting/profile/upload-avatar-directive.js"></script>
+	<script src="scripts/setting/profile/preview-avatar-modal-ctrl.js"></script>
+	<script src="scripts/setting/account/account-ctrl.js"></script>
+	<script src="scripts/setting/password/password-ctrl.js"></script>
+
+	<script src="scripts/person/person.js"></script>
+	<script src="scripts/person/common/profile/profile-ctrl.js"></script>
+	<script src="scripts/person/common/navi/navi-ctrl.js"></script>
+	<script src="scripts/person/common/photo/photo-ctrl.js"></script>
+	<script src="scripts/person/post/post-ctrl.js"></script>
+	<script src="scripts/person/follow_person/follow-person-ctrl.js"></script>
+	<script src="scripts/person/follow_stock/follow-stock-ctrl.js"></script>
+	<script src="scripts/person/follower/follower-ctrl.js"></script>
+	<script src="scripts/person/running/running-ctrl.js"></script>
+
+	<script src="scripts/stock/stock.js"></script>
+	<script src="scripts/stock/common/sidebar/sidebar-ctrl.js"></script>
+	<script src="scripts/stock/common/profile/profile-ctrl.js"></script>
+	<script src="scripts/stock/portal/post/post-ctrl.js"></script>
+	<script src="scripts/stock/portal/follower/follower-ctrl.js"></script>
+	<script src="scripts/stock/technique/technique-ctrl.js"></script>
+
+	<script src="scripts/tweet/tweet.js"></script>
+	<script src="scripts/tweet/post/post-ctrl.js"></script>
+
+	<!-- endbuild -->
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+	"hot": {
+		"sidebar": {
+			"index": {
+				"header": "快速連結",
+				"hot_discuss": "熱門討論",
+				"hot_news": "熱門新聞",
+				"hot_announce": "熱門公告",
+				"new_post": "最新推文"
+			}
+		}
+	}
+}

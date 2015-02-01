@@ -1,0 +1,4 @@
+<div ng-controller="homToolbarCtrl">
+	<div ng-include="'scripts/home/common/toolbar/nobody-toolbar.html'" ng-if="!isAuthenticated()"></div>
+	<div ng-include="'scripts/home/common/toolbar/auth-toolbar.html'" ng-if="isAuthenticated()"></div>
+</div>

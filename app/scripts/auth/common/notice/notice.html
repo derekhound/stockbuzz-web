@@ -1,0 +1,6 @@
+<div id="notice" ng-controller="autNoticeCtrl">
+	<div class="message" ng-repeat="item in get()">
+		<button class="close" ng-click="remove(item)">&times;</button>
+		<span>{{item.message}}</span>
+	</div>
+</div>

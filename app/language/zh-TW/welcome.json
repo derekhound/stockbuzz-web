@@ -1,0 +1,19 @@
+{
+	"welcome": {
+		"signin": {
+			"title": "快速登入",
+			"email": "電子郵件",
+			"password": "密碼",
+			"remember_me": "記住我",
+			"forgot_password": "忘記密碼",
+			"ok": "登入"
+		},
+		"signup": {
+			"title": "初次來到 StockBucks?",
+			"fullname": "全名",
+			"email": "電子郵件",
+			"password": "密碼",
+			"ok": "免費註冊"
+		}
+	}
+}

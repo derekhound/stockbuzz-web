@@ -1,0 +1,56 @@
+<div id="photo-photo-modal" class="modal-body">
+
+	<div class="title">
+		<a class="pull-right" translate="photo.text.close" ng-click="cancel()"></a>
+		<div>Photo {{lightbox.photo.rank}} of {{total}}</div>
+	</div>
+
+	<div class="photo_container">
+		<a class="prev_photo" ng-click="getSinglePhoto('prev')">
+			<div class="icon">
+				<i class="fa fa-angle-left fa-4x"></i>
+			</div>
+		</a>
+		<a class="next_photo" ng-click="getSinglePhoto('next')">
+			<div class="icon">
+				<i class="fa fa-angle-right fa-4x"></i>
+			</div>
+		</a>
+		<img ng-src="{{lightbox.photo.bestImg}}" />
+	</div>
+
+	<div class="metadata">
+		<!-- narrow column -->
+		<div class="narrow_column">
+			<div class="info">
+				<div class="name" translate="photo.photo_modal.album"></div>
+				<div class="action"><a ng-click="gotoAlbum()">{{lightbox.photo.album.name}}</a></div>
+			</div>
+
+			<div class="info">
+				<div class="name" translate="photo.photo_modal.added_by"></div>
+				<div class="action"><a ng-click="gotoUserPage()">{{lightbox.photo.owner_fullname}}</a></div>
+			</div>
+
+			<div class="action" ng-show="user.user_id == currentUser.user_id">
+				<a translate="photo.photo_modal.delete" ng-click="deletePhoto()"></a>
+			</div>
+		</div>
+
+		<!-- wide column -->
+		<div class="wide_column">
+
+			<div class="info">
+				<a class="moment">{{lightbox.photo.create_utime | date:'yyyy-MM-dd'}}</a>
+				<span class="divider">|</span>
+				<span class="like" ng-class="{'active': lightbox.photo.is_like}">
+					<a ng-click="toggleLike()">
+						<span class="name" translate="timeline.action.like"></span>
+						<i class="fa fa-heart"></i>
+						<span class="count">{{lightbox.photo.like_count}}</span>
+					</a>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>

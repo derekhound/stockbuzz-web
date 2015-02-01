@@ -1,0 +1,23 @@
+<div id="photo-album-photos" class="widget" ng-controller="phoAlbumPhotosCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title">{{getTitleStr()}}</h4>
+	</div>
+
+	<div class="widget-bd">
+
+		<!-- latest_photo -->
+		<div class="photogallery" infinite-scroll="getLatestPhotos()">
+			<div class="summary">{{album.name}}</div>
+
+			<div class="photo_container">
+				<div class="photo_item" ng-repeat="photo in photo_gallery.photos">
+					<a ng-click="openPhotoModal(photo)">
+						<img ng-src="{{photo.bestImg}}" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

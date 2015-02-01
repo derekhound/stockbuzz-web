@@ -1,0 +1,62 @@
+<div class="post-box">
+	<div class="wrapper">
+
+		<div class="content">
+			<!-- avatar -->
+			<a ng-href="#/home/user/{{currentUser.username}}" class="avatar_container">
+				<img ng-src="{{currentUser.avatarM}}" class="avatar avatarM">
+			</a>
+
+			<!-- optional -->
+			<div class="optional">
+				<div>Optional</div>
+			</div>
+
+			<!-- title -->
+			<input
+				type="text"
+				class="form-control"
+				placeholder="{{'timeline.box.title_hint' | translate}}"
+				ng-model="title"
+				maxlength="50">
+
+			<!-- text -->
+			<textarea
+				class="form-control"
+				placeholder="{{'timeline.box.post_hint' | translate}}"
+				ng-model="text"
+				msd-elastic
+				ng-focus="expand()">
+			</textarea>
+
+			<!-- photo -->
+			<div class="photo_container">
+				<div class="photo_item" ng-show="photo.show_photo" ng-repeat="photo in photos">
+					<a ng-href="{{photo.url}}" target="_blank">
+						<img ng-src="{{photo.url}}" />
+					</a>
+					<div class="progress" ng-show="photo.show_progress">
+						<progressbar value="photo.progress"></progressbar>
+					</div>
+				</div>
+			</div>
+
+			<!-- action -->
+			<div class="action">
+				<!-- photo -->
+				<span class="btn-file">
+					<input type="file" name="photo_pick" multiple title="{{'timeline.box.tooltip.upload_photo' | translate}}">
+					<i class="fa fa-camera fa-lg"></i>
+				</span>
+
+				<!-- title -->
+				<span class="btn-title" title="{{'timeline.box.tooltip.title' | translate}}" ng-click="toggleTitleInput()">
+					<i class="fa fa-comments fa-lg"></i>
+				</span>
+
+				<!-- ok -->
+				<button type="button" class="btn btn-tweet btn-sm pull-right" translate="timeline.box.post" ng-click="submit()"></button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "name": "stockbucks",
+  "version": "1.0.0",
+  "authors": [
+    "derek <derekhound@gmail.com>",
+    "lala <lalayueh@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+  ],
+  "dependencies": {
+    "jquery": "1.11.0",
+    "angular": "1.2.16",
+    "angular-sanitize": "1.2.16",
+    "angular-ui-router": "0.2.10",
+    "bootstrap": "3.1.1",
+    "angular-bootstrap": "0.11.0",
+    "angular-translate": "2.2.0",
+    "angular-translate-loader-static-files": "2.2.0",
+    "angular-translate-handler-log": "2.0.0",
+	"angular-easyfb": "1.0.1",
+    "es5-shim": "2.3.0",
+    "json3": "3.3.0",
+    "jquery.nicescroll": "*"
+  }
+}

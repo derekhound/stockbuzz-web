@@ -1,0 +1,7 @@
+node_modules
+app/bower_components
+dist
+.idea
+.tmp
+_install
+_tarball

@@ -1,0 +1,66 @@
+<div id="search-stock-filter" class="widget">
+	<div class="widget-bd">
+
+		<!-- Country -->
+		<div class="row">
+			<div class="col-xs-24">
+				<label translate="search.stock.filter.country.title"></label>
+			</div>
+		</div>
+		<div class="row form-group">
+			<div class="col-xs-24">
+				<select name="country" class="form-control" ng-model="filter.country">
+					<option value="tw" translate="search.stock.filter.country.tw"></option>
+				</select>
+			</div>
+		</div>
+
+		<!-- Market -->
+		<div class="row">
+			<div class="col-xs-24">
+				<label translate="search.stock.filter.market.title"></label>
+			</div>
+		</div>
+		<div class="row form-group">
+			<div class="col-xs-24">
+				<select name="market" class="form-control" ng-model="filter.market">
+					<option value=""        translate="search.stock.filter.market.default"></option>
+					<option value="tw_twse" translate="search.stock.filter.market.tw_twse"></option>
+					<option value="tw_gtsm" translate="search.stock.filter.market.tw_gtsm"></option>
+				</select>
+			</div>
+		</div>
+
+		<!-- Type -->
+		<div class="row">
+			<div class="col-xs-24">
+				<label translate="search.stock.filter.type.title"></label>
+			</div>
+		</div>
+		<div class="row form-group">
+			<div class="col-xs-24">
+				<select name="type" class="form-control" ng-model="filter.type">
+					<option value=""         translate="search.stock.filter.type.default"></option>
+					<option value="tw_stock" translate="search.stock.filter.type.tw_stock"></option>
+					<option value="tw_etf"   translate="search.stock.filter.type.tw_etf"></option>
+					<option value="tw_tdr"   translate="search.stock.filter.type.tw_tdr"></option>
+				</select>
+			</div>
+		</div>
+
+		<!-- Group Id -->
+		<div class="row">
+			<div class="col-xs-24">
+				<label translate="search.stock.filter.group.title"></label>
+			</div>
+		</div>
+		<div id="group-group" class="row form-group">
+			<div class="col-xs-24">
+				<select id="group" name="group" class="form-control" ng-model="filter.group_id"
+						ng-options="group.value as group.name for group in groups">
+					<option value="" translate="search.stock.filter.group.default"></option>
+				</select>
+			</div>
+		</div>
+	</div>
+</div>

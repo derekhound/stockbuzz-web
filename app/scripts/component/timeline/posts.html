@@ -1,0 +1,140 @@
+<div class="posts">
+	<div class="tweet post" tweet-id="{{post.tweet_id}}" ng-repeat="post in feed.posts">
+		<!-- tweet-menu -->
+		<div class="tweet-menu" ng-click="deletePost(post.tweet_id)" ng-show="post.user_id == currentUser.user_id">
+			<a><i class="fa fa-times"></i></a>
+		</div>
+
+		<!-- tweet-who -->
+		<div class="tweet-who" ng-if="post.who_id">
+			<div class="action">
+				<i class="fa fa-retweet"></i>
+			</div>
+			<div class="desp">{{'timeline.who.from' | translate}} <a ng-href="#/home/user/{{post.who_username}}">{{post.who_fullname}}</a> {{'timeline.who.retweet' | translate}}</div>
+		</div>
+
+		<!-- content -->
+		<div class="tweet-content">
+			<a ng-href="#/home/user/{{post.username}}" class="avatar_container">
+				<img ng-src="{{post.avatarM}}" class="avatar avatarM">
+			</a>
+
+			<div class="tweet-hd">
+				<a ng-href="#/home/user/{{post.username}}" class="fullname">{{post.fullname}}</a>&nbsp;
+				<a ng-href="#/home/user/{{post.username}}" class="username">@{{post.username}}</a>
+			</div>
+
+			<div class="tweet-bd">
+				<div class="title" ng-if="post.title">{{post.title}}</div>
+
+				<div class="content">
+					<span ng-bind-html="getContent(post)"></span>
+					<span ng-show="!post.is_expand">{{'timeline.text.eclipse' | translate}} <a translate="timeline.action.more" ng-click="expand(post)"></a></span>
+				</div>
+
+				<div class="info" ng-show="post.is_expand" ng-if="post.info"><a ng-href="{{post.url}}" target="_blank">{{post.info}}</a></div>
+
+				<!-- photo -->
+				<qb-photo-wall class="photo-wall" photos="post.photos" ng-if="post.photos">
+				</qb-photo-wall>
+
+				<!-- quote -->
+				<div class="tweet-quote" ng-if="post.quote_id && !post.quote">
+					<div translate="timeline.text.tweet_has_been_deleted"></div>
+				</div>
+				<div class="tweet-quote" ng-if="post.quote">
+					<a class="photo">
+						<img ng-src="{{post.quote.avatarS}}" class="avatar avatarS">
+					</a>
+
+					<div class="quote-hd">
+						<div>
+							<a ng-href="#/home/user/{{post.quote.username}}" class="fullname">{{post.quote.fullname}}</a>&nbsp;
+							<a ng-href="#/home/user/{{post.quote.username}}" class="username">@{{post.quote.username}}</a>
+						</div>
+						<div class="info">
+							<a class="moment" title="{{post.quote.create_utime | date:'yyyy-MM-dd HH:mm:ss'}}">{{post.quote.moment}}</a>
+							<span class="divider">|</span>
+							<span class="comment">
+								<a ng-href>
+									<span class="name" translate="timeline.action.related_comment"></span>
+									<span class="count" ng-show="post.quote.reply_count > 0">{{post.quote.reply_count}}</span>
+								</a>
+							</span>
+						</div>
+					</div>
+
+					<div class="title" ng-if="post.quote.title">{{post.quote.title}}</div>
+
+					<div class="content">
+						<span ng-bind-html="getContent(post.quote)"></span>
+						<span ng-show="!post.quote.is_expand">{{'timeline.text.eclipse' | translate}} <a translate="timeline.action.more" ng-click="expand(post.quote)"></a></span>
+					</div>
+
+					<qb-photo-wall class="photo-wall" photos="post.quote.photos" ng-if="post.quote.photos">
+					</qb-photo-wall>
+				</div>
+
+				<!-- link -->
+				<a ng-href="{{post.link.url}}" target="_blank" class="tweet-link" ng-if="post.link_id">
+					<div class="image" ng-if="post.link.image">
+                        <img ng-src="{{post.link.image}}" />
+					</div>
+					<div class="body">
+						<div class="title" ng-bind-html="post.link.title"></div>
+						<div class="content" ng-bind-html="post.link.text"></div>
+						<div class="info" ng-bind-html="post.link.info"></div>
+					</div>
+				</a>
+			</div>
+
+			<div class="tweet-ft">
+				<span class="info">
+					<a ng-href="#/tweet/post/{{post.tweet_id}}" class="moment" title="{{post.create_utime | date:'yyyy-MM-dd HH:mm:ss'}}">{{post.moment}}</a>
+					<span class="divider">|</span>
+					<span class="comment">
+						<a ng-click="showComment(post.rank_id)">
+							<span class="name" translate="timeline.action.comment"></span>
+							<span class="count" ng-show="post.reply_count > 0">{{post.reply_count}}</span>
+						</a>
+					</span>
+				</span>
+				<ul class="action">
+					<li ng-class="{'active': post.is_retweet}" ng-hide="post.user_id == currentUser.user_id">
+						<a ng-click="toggleRetweet(post)">
+							<span class="name" translate="timeline.action.retweet"></span>
+							<i class="fa fa-retweet"></i>
+							<span class="count">{{post.retweet_count}}</span>
+						</a>
+					</li>
+					<li ng-class="{'active': post.is_favorite}">
+						<a ng-click="toggleFavorite(post.tweet_id)">
+							<span class="name" translate="timeline.action.favorite"></span>
+							<i class="fa fa-star"></i>
+							<span class="count">{{post.favorite_count}}</span>
+						</a>
+					</li>
+					<li ng-class="{'active': post.is_like}">
+						<a ng-click="toggleLike(post.tweet_id)">
+							<span class="name" translate="timeline.action.like"></span>
+							<i class="fa fa-heart"></i>
+							<span class="count">{{post.like_count}}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- comments -->
+			<qb-comments
+				current-user="currentUser"
+				post="post"
+				on-delete-post="deletePost(post_id)"
+				on-submit-comment="submitComment(text, rank_id)"
+				on-get-unread-comment="getUnreadComment(rank_id)"
+				on-delete-comment="deleteComment(tweet_id)"
+				on-toggle-like="toggleLike(tweet_id)"
+			>
+			</qb-comments>
+		</div>
+	</div>
+</div>

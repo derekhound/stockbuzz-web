@@ -1,0 +1,77 @@
+// toolbar
+//------------------------------
+
+.navbar-inverse {
+	background-image: linear-gradient(to bottom, #4c6d91, #5a7ca0);
+}
+
+#logo {
+    width: 132px;
+}
+
+#nav-profile {
+	a {
+		.avatar {
+			width: 18px;
+			height: 18px;
+			margin-right: 6px;
+		}
+	}
+}
+
+#search-bar-addon {
+	position: relative;
+
+	// search-bar icon
+	> i {
+		position: absolute;
+		top: 8px;
+		right: 10px;
+		color: #ddd;
+	}
+
+	// search-bar input
+	> input {
+		width: 252px;
+		padding-right: 30px;
+	}
+
+	// dropdown menu
+	ul.dropdown-menu {
+		> li {
+			> a.search-bar-match {
+				min-width: 252px;
+				min-height: 49px;
+				padding: 7px 15px 6px 10px;
+
+				> .avatar {
+					float: left;
+					width: 32px;
+					height: 32px;
+					margin-right: 9px;
+				}
+
+				> .content {
+					position: relative;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+
+					line-height: 32px;
+				}
+			}
+
+			&.active,
+			&:hover {
+				> a.search-bar-match {
+					> .content {
+						.fullname,
+						.username {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}

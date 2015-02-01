@@ -1,0 +1,42 @@
+<div class="widget" ng-controller="setAccountCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title" translate="setting.account.title"></h4>
+	</div>
+
+	<div class="widget-bd">
+		<form name="form" class="form-horizontal" novalidate>
+
+			<!-- username -->
+			<div class="form-group">
+				<label class="col-xs-6 control-label" translate="setting.account.form.username"></label>
+				<div class="col-xs-12">
+					<input type="text" name="username" class="form-control" ng-model="data.username" ng-pattern="/^\w+$/" ng-minlength="6" ng-maxlength="20" unique-value="username" required>
+					<!-- [INFO] Default -->
+					<span class="help-block small" translate="setting.account.help.I_USERNAME"
+				  		ng-show="form.username.$pristine">
+				  	</span>
+					<!-- [SUCCESS] OK -->
+					<span class="help-block small success" translate="setting.account.help.S_OK"
+						  ng-show="form.username.$dirty && form.username.$valid">
+				  	</span>
+					<!-- [ERROR] Required -->
+					<span class="help-block small error" ng-bind="usernameErrorStr(form.username)"
+				  		ng-show="form.username.$dirty && form.username.$invalid">
+					</span>
+				</div>
+			</div>
+
+			<!-- save -->
+			<div class="form-group">
+				<label class="col-xs-6 control-label"></label>
+				<div class="col-xs-12">
+					<button class="btn btn-primary" translate="setting.profile.form.ok"
+						ng-disabled="form.$pristine || form.$invalid" ng-click="ok()">
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</div>

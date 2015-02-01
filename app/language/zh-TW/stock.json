@@ -1,0 +1,52 @@
+{
+	"stock": {
+		"text": {
+			"no_data": "目前沒有任何資料"
+		},
+		"btn_follow": {
+			"edit": "編輯資料",
+			"unfollow": "關注",
+			"follow": "正在關注"
+		},
+		"profile": {
+			"trade": "交易",
+			"realtime": "即時行情",
+			"previous_close": "昨收",
+			"open": "開盤",
+			"days_high": "最高",
+			"days_low": "最低",
+			"volume": "成交量"
+		},
+		"post": {
+			"title": "我的推文"
+		},
+		"follower": {
+			"title": "跟隨的人"
+		},
+		"technique": {
+			"title": "技術分析",
+			"tooltip": {
+				"open": "開盤：" ,
+				"high": "最高：",
+				"low": "最低：",
+				"close": "收盤：",
+				"volume": "成交量："
+			},
+			"text": {
+				"daily_line": "日線",
+				"weekly_line": "週線",
+				"monthly_line": "月線",
+				"3_month": "3個月",
+				"6_month": "6個月",
+				"1_year": "1年",
+				"2_year": "2年",
+				"3_year": "3年",
+				"5_year": "5年",
+				"6_year": "6年",
+				"10_year": "10年",
+				"15_year": "15年",
+				"20_year": "20年"
+			}
+		}
+	}
+}

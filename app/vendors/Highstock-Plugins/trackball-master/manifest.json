@@ -1,0 +1,33 @@
+{
+    "name": "Trackball",
+    "version": "1.0.2",
+    "title": "Highcharts Trackball Extension",
+    "demo": [
+        "http://jsfiddle.net/highcharts/nhVbs/10/"
+    ],
+    "author": {
+        "name": "Torstein Hønsi",
+        "url": "https://github.com/highslide-software"
+    },
+    "maintainers": [
+    	{
+    		"name": "Jon Arild Nygård",
+    		"email": "jon.arild@highsoft.com",
+    		"url": "https://github.com/jon-a-nygaard"
+    	}
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/highslide-software/trackball/blob/master/License-(MIT).txt"
+        }
+    ],
+    "description": "A plugin for Highcharts, adding trackball/marker features to each series in the chart.",
+    "keywords": [
+     "trackball",
+     "marker"
+    ],
+    "dependencies": {
+        "Highcharts": ">=3.0.0"
+    }
+}

@@ -1,0 +1,20 @@
+<div id="page">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-offset-1 col-xs-7">
+				<!-- navigation -->
+				<div ng-include="'scripts/person/common/navi/navi.html'"></div>
+				<!-- photo -->
+				<div ng-include="'scripts/person/common/photo/photo.html'"></div>
+			</div>
+
+			<div class="col-xs-15">
+				<!-- profile -->
+				<div ng-include="'scripts/person/common/profile/profile.html'"></div>
+
+				<!-- variable panel -->
+				<div ui-view></div>
+			</div>
+		</div>
+	</div>
+</div>

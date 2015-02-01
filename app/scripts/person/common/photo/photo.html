@@ -1,0 +1,19 @@
+<div id="person-photo" class="module" ng-controller="perPhotoCtrl">
+
+	<div class="module-hd">
+		<span class="title" translate="person.photo.title"></span>
+		<span class="subtitle" ng-if="false">
+			<span class="middledot">·</span>
+			<a ng-href="#/home/photo/album/{{user.username}}">{{'person.photo.see_all' | translate}}</a>
+		</span>
+	</div>
+
+	<div class="photo_container">
+		<div class="photo_item" ng-repeat="photo in photo_gallery.photos">
+			<a ng-click="openPhotoModal(photo)">
+				<img ng-src="{{photo.bestImg}}" />
+			</a>
+		</div>
+	</div>
+
+</div>

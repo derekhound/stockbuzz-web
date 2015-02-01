@@ -1,0 +1,45 @@
+<div class="widget" ng-controller="autSendActivateEmailCtrl">
+
+	<div class="widget-hd">
+		<h4 class="title" translate="auth.send_activation_email.title"></h4>
+	</div>
+
+	<div class="widget-bd">
+		<form name="form" novalidate>
+
+			<!-- email -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label translate="auth.send_activation_email.form.email"></label>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-offset-4 col-xs-8">
+					<input type="email" name="email" class="form-control" ng-model="data.email" required>
+				</div>
+			</div>
+
+			<!-- ok -->
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<button type="submit" id="ok" class="btn btn-primary" translate="auth.send_activation_email.form.ok"
+						ng-disabled="form.$invalid" ng-click="ok()">
+					</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-8">
+					<label>&nbsp;</label>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="widget-ft">
+		<div class="row">
+			<div class="col-xs-offset-4 col-xs-20">
+				<p>{{'auth.send_activation_email.text.already_receive_email' | translate}}</p>
+			</div>
+		</div>
+	</div>
+</div>

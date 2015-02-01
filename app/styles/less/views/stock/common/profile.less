@@ -1,0 +1,81 @@
+#stock-profile {
+
+    .profile-hd {
+        margin-bottom: 5px;
+        .clearfix();
+        .name {
+            float: left;
+            line-height: 30px;
+            .fullname {
+                font-size: @font-size-large;
+                vertical-align: bottom;
+            }
+            .username {
+                font-size: @font-size-base;
+                vertical-align: bottom;
+            }
+        }
+        .menu {
+            float: right;
+            .menu-item {
+                float: left;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .profile-bd {
+        margin-bottom: 5px;
+        .clearfix();
+        .current {
+            float: left;
+            .price {
+                margin-right: 10px;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .change {
+                margin-right: 10px;
+                font-size: 18px;
+            }
+            .percent {
+                font-size: 18px;
+            }
+        }
+        .time {
+            float: right;
+            margin-top: 6px;
+            font-size: 12px;
+            color: #999;
+        }
+    }
+
+    .quote {
+        .clearfix();
+        .table1,
+        .table2,
+        .table3 {
+            float: left;
+            width: 160px;
+            font-size: 12px;
+
+            th {
+                padding: 5px 5px 5px 0;
+                color: #999;
+                text-align: left;
+                border-bottom: 1px solid #e4e4e4;
+            }
+
+            td {
+                padding: 5px 0;
+                text-align: right;
+                border-bottom: 1px solid #e4e4e4;
+            }
+        }
+
+        .table1,
+        .table2 {
+            margin-right: 35px;
+        }
+    }
+}

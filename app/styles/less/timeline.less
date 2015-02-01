@@ -1,0 +1,621 @@
+// btn-tweet
+//------------------------------
+
+@btn-tweet-color: #fff;
+@btn-tweet-bg: #658ab0;
+@btn-tweet-border: #557da6;
+
+.btn-tweet {
+    padding: 3px 20px;
+    .button-variant(@btn-tweet-color; @btn-tweet-bg; @btn-tweet-border);
+}
+
+// timeline
+//------------------------------
+
+.timeline {
+    padding: 0 12px;
+
+    .tags {
+        padding: 12px 0 12px 0;
+        border-bottom: 1px solid #f1f1f1;;
+    }
+}
+
+// tweet
+//------------------------------
+
+.tweet {
+    p {
+        margin: 9px 0;
+    }
+	p:first-child {
+		margin-top: 0;
+	}
+	p:last-child {
+		margin-bottom: 0;
+		display: inline;
+	}
+}
+
+.tweet {
+	position: relative;
+	padding: 9px 0;
+
+	border-top: 1px solid #f1f1f1;
+    &:first-child {
+        border-top: 0;
+    }
+
+    > .tweet-menu {
+        position: absolute;
+		top: 9px;
+		right: 4px;
+        z-index: @zindex-popover;
+        visibility: hidden;
+
+        //overwrite
+        //top
+        //right
+    }
+
+	> .tweet-who {
+		position: relative;
+		padding-left: 58px;	// 48 + 10 = 58
+		margin-bottom: 3px;
+
+		.action {
+			position: absolute;
+			top: 0;
+			left: 33px;
+			color: #77b255;
+		}
+
+        .desp {
+            color: #999;
+            a {
+                color: #999;
+                &:hover {
+                    color: @link-hover-color;
+                }
+            }
+        }
+	}
+
+	> .tweet-content {
+
+		> .tweet-ft {
+            padding-top: 5px;
+            font-size: 12px;
+            line-height: 18px;
+
+            .info {
+                .moment {
+                    color: #999;
+                    text-decoration: none;
+                }
+                .divider {
+                    padding: 0 4px;
+                    color: #808080;
+                }
+                .comment {
+                    a {
+                        color: @action-running-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .action {
+                float: right;
+                line-height: 18px;
+
+                li {
+                    display: inline;
+                    a {
+                        display: inline-block;
+                        padding: 0 4px;
+                        line-height: 18px;
+                        text-decoration: none;
+                        border-radius: 3px;
+
+                        .name,
+                        .count {
+                            color: @action-standby-color;
+                        }
+                        i {
+                            color: @action-icon-standby-color;
+                        }
+
+                        &:hover {
+                            background: @action-hover-bgcolor;
+                        }
+                    }
+
+                    &.active {
+                        a {
+                            .name,
+                            .count {
+                                color: @action-active-color;
+                            }
+                            i {
+                                color: @action-icon-active-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+	}
+
+	&:hover {
+        > .tweet-menu {
+            visibility: visible;
+            a {
+                color: @action-icon-running-color;
+                &:hover {
+                    color: @action-icon-active-color;
+                }
+            }
+        }
+
+        > .tweet-content {
+            > .tweet-ft {
+                .action {
+                    li {
+                        a {
+                            .name,
+                            .count {
+                                color: @action-running-color;
+                            }
+                            i {
+                                color: @action-icon-running-color;
+                            }
+                        }
+                        &.active {
+                            a {
+                                .name,
+                                .count {
+                                    color: @action-active-color;
+                                }
+                                i {
+                                    color: @action-icon-active-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+	}
+}
+
+.tweet.post {
+	min-height: 72px;		// 9 + 3 + 48 + 3 + 9 = 72
+
+	> .tweet-content {
+		position: relative;
+		padding-left: 58px;	// 48 + 10 = 58
+
+		> .avatar_container {
+			position: absolute;
+			top: 3px;
+			left: 0;
+		}
+
+		> .tweet-hd {
+			line-height: 18px;
+		}
+
+		> .tweet-bd {
+			> .title {
+                margin: 6px 0;
+                font-size: 16px;
+                font-weight: bold;
+			}
+			> .content {
+
+			}
+			> .info {
+				margin-top: 6px;
+			}
+		}
+
+		.comments {
+			margin-top: 9px;
+		}
+	}
+}
+
+.tweet.comment {
+	min-height: 54px;		// 9 + 36 + 9 = 54
+
+	> .tweet-content {
+		position: relative;
+		padding-left: 44px;	// 36 + 8 = 44
+
+		> .avatar_container {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		> .tweet-hd {
+			line-height: 18px;
+		}
+
+		> .tweet-bd {
+			> .title {
+                margin: 6px 0;
+                font-size: 16px;
+                font-weight: bold;
+			}
+			> .content {
+
+			}
+			> .info {
+				margin-top: 6px;
+			}
+		}
+	}
+}
+
+// quote
+// ------------------------------
+
+.tweet-quote {
+	padding-left: 9px;
+	margin-top: 9px;
+	border-left: 2px solid #C3D1E0;
+	color: #666;
+
+	> .photo {
+		float: left;
+		margin-right: 9px;
+	}
+	> .quote-hd {
+		margin-bottom: 6px;
+		line-height: 18px;
+		.clearfix();
+
+		.info {
+			font-size: 12px;
+
+			.moment {
+				color: #999;
+				text-decoration: none;
+			}
+			.divider {
+				padding: 0 4px;
+				color: #808080;
+			}
+			.comment {
+				a {
+					color: @action-running-color;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	> .title {
+		margin: 6px 0;
+		font-size: 16px;
+	}
+	> .content {
+
+	}
+}
+
+
+// link
+// ------------------------------
+
+a.tweet-link {
+	display: block;
+	margin-top: 9px;
+	text-decoration: none;
+	border: 1px solid #e5e5e5;
+
+	.image {
+		height: 270px;      // aspect ratio 16:9
+		overflow: hidden;
+	}
+
+	.body {
+		padding: 9px 7px;
+		.title {
+			font-weight: bold;
+			color: @text-color;
+		}
+		.content {
+			margin-top: 5px;
+			color: @text-color;
+		}
+		.info {
+			margin-top: 5px;
+			font-size: 12px;
+			color: #999;
+		}
+	}
+}
+
+// unread_comments
+// ------------------------------
+
+.unread_comments {
+    padding-bottom: 9px;
+
+    .body {
+        padding: 6px 0;
+        height: 28px;
+        font-size: 12px;
+        text-align: center;
+        cursor: pointer;
+        color: #6a7989;
+        background: @action-hover-bgcolor;
+        border-radius: 3px;
+    }
+}
+
+// post-Box
+// -------------------------
+
+.post-box {
+	position: relative;
+	padding: 4px;
+	//background: #e9edf1;
+	border-bottom: 1px solid #dddddd;
+
+	.wrapper {
+		position: relative;
+		padding: 8px;
+		background: #e9edf1;
+
+		.content {
+			position: relative;
+
+			.avatar_container {
+				display: none;
+			}
+
+			.optional {
+				display: none;
+			}
+
+            input.optional {
+                display: none;
+			}
+
+            input.form-control {
+                display: none;
+			}
+
+			textarea.form-control {
+				height: 30px;   // 6px + 18px * 1 row + 6px
+				min-height: 30px;
+
+				padding: 6px;
+				resize: none;
+				overflow: hidden;
+				border-radius: 0;
+
+				// for autogrow use, but I don't know why
+				line-height: 18px;
+
+				// disable blue glow
+				&:focus {
+					outline: none;
+					border: 1px solid @input-border !important;
+					.box-shadow(none) !important;
+				}
+			}
+
+            .photo_container {
+                display: none;
+            }
+
+			.action {
+				display: none;
+			}
+		}
+	}
+}
+
+.post-box.open {
+
+	.wrapper {
+
+		.content {
+			padding-left: 58px;	// 48 + 10 = 58
+
+			.avatar_container {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+			}
+
+			textarea.form-control {
+				min-height: 48px;   // 6px + 18px * 2 rows + 6px
+			}
+
+            .photo_container {
+                display: block;
+                margin-top: 8px;
+
+                .photo_item {
+                    display: inline-block;
+                    padding: 0 8px 8px 0;       // there is a 3px gap between img element
+                    vertical-align: top;        // this is very important propert for diffrent height div block
+
+                    a {
+                        display: block;
+                        width: 114px;
+                        height: 85px;
+                        overflow: hidden;
+                        text-align: center;
+                        background: #f1f1f1;
+
+                        img {
+                            max-width: 114px;
+                        }
+                    }
+
+                    .progress {
+                        height: 9px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+			.action {
+				display: block;
+				margin-top: 8px;
+				.clearfix();
+
+				.btn-file,
+				.btn-title {
+					margin-right: 5px;
+					color: #94aac3;
+					cursor: pointer;
+					&:hover {
+						color: #849dba;
+					}
+				}
+				.btn-tweet {
+					float: right;
+				}
+			}
+		}
+	}
+}
+
+.post-box.title {
+	.wrapper {
+		.content {
+            .optional {
+				display: block;
+
+                position: absolute;
+                top: 8px;
+                right: 10px;
+                font-size: 12px;
+                font-style: italic;
+                color: #999;
+            }
+
+			input.form-control {
+				display: block;
+
+                height: 30px;
+
+                padding: 6px;
+                border-radius: 0;
+                border-bottom: none;
+
+                line-height: 18px;
+
+                // disable blue glow
+                &:focus {
+                    outline: none;
+                    border: 1px solid @input-border !important;
+                    border-bottom: none !important;
+                    .box-shadow(none) !important;
+                }
+			}
+		}
+	}
+}
+
+
+// comment-Box
+// -------------------------
+
+.comment-box {
+	position: relative;
+	padding: 6px;
+	margin-top: 3px;
+	background: #e9edf1;
+
+	.content {
+		position: relative;
+
+		.avatar_container {
+			display: none;
+		}
+
+		textarea.form-control {
+			height: 30px;   // 6px + 18px * 1 row + 6px
+			min-height: 30px;
+
+			padding: 6px;
+			border-radius: 0;
+			resize: none;
+			overflow: hidden;
+
+			// for autogrow use, but I don't know why
+			line-height: 18px;
+
+			// disable blue glow
+			&:focus {
+				outline: none;
+				border: 1px solid @input-border !important;
+				.box-shadow(none) !important;
+			}
+		}
+
+		.action {
+			display: none;
+		}
+	}
+}
+
+.comment-box.open {
+	margin-left: -6px;
+
+	.content {
+		padding-left: 44px;	// 36 + 8 = 44
+
+		.avatar_container {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+		}
+
+		textarea.form-control {
+			min-height: 36px;   // 9px + 18px * 1 rows + 9px
+			padding: 9px 6px;
+		}
+
+		.action {
+			display: block;
+			margin-top: 6px;
+			.clearfix();
+
+			.btn-tweet {
+				float: right;
+			}
+		}
+	}
+}
+
+// retweet-Box
+// -------------------------
+
+.retweet-box {
+    // overwrite form-control class
+    textarea.form-control {
+        padding: 6px;
+        resize: none;
+        overflow: hidden;
+
+        // for autogrow use, but I don't know why
+        //line-height: normal;
+        line-height: 18px;
+
+        // weird! why do you need to apply height.
+        // I consider rows is enough, but not work here
+        height: 102px;	// 5*18+6+6 = 102
+    }
+}
